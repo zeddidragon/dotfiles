@@ -27,10 +27,7 @@ set expandtab
 au BufRead,BufNewFile *.jbuilder setfiletype ruby
 au BufRead,BufNewFile Capfile setfiletype ruby
 
-" Coffeescript things
-autocmd FileType coffee map <C-S-d> :CoffeeCompile
-
-function SetPythonOptions()!
+function SetPythonOptions()
 	setlocal tabstop=4
 	setlocal shiftwidth=4
 	setlocal colorcolumn=78

@@ -27,17 +27,6 @@ set expandtab
 au BufRead,BufNewFile *.jbuilder setfiletype ruby
 au BufRead,BufNewFile Capfile setfiletype ruby
 
-" HTML things
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-
-" Python things
-function SetPythonOptions()
-	setlocal tabstop=4
-	setlocal shiftwidth=4
-	setlocal colorcolumn=78
-endfunction
-
-autocmd FileType python SetPythonOptions()
 
 " CtrlP
 set wildignore+=*\\public\\*,*/public/*

@@ -17,16 +17,23 @@ set clipboard=unnamedplus
 nnoremap y "+y
 vnoremap y "+y
 
+" Ruby things
 set colorcolumn=80
 
 set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+au BufRead,BufNewFile *.jbuilder setfiletype ruby
+au BufRead,BufNewFile Capfile setfiletype ruby
 
-function SetPythonOptions()
+" Coffeescript things
+autocmd FileType coffee map <C-S-d> :CoffeeCompile
+
+function SetPythonOptions()!
 	setlocal tabstop=4
 	setlocal shiftwidth=4
 	setlocal colorcolumn=78
 endfunction
 
+autocmd FileType python SetPythonOptions()

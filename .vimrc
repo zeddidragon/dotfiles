@@ -1,10 +1,18 @@
 execute pathogen#infect()
+
+" Enable defaults that really should've been enabled in the first place
 syntax on
 filetype plugin indent on
 colorscheme gruvbox
 set ruler
 set backspace=2
 set number
+set incsearch
+set hlsearch
+
+" Map saving to Ctrl+S like sane person
+nnoremap <C-s> :w<cr>
+inoremap <C-s> <esc>:w<cr>a
 
 " Start NerdTree unless a file was specificed
 let g:NERDTreeWinSize=20

@@ -1,0 +1,6 @@
+*
+
+!.*
+!vimfiles
+*.sublime-project
+*.sublime-workspace

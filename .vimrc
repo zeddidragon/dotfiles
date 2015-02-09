@@ -4,6 +4,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 colorscheme gruvbox
+set background=dark
 set ruler
 set backspace=2
 set number
@@ -13,6 +14,8 @@ set hlsearch
 " Map saving to Ctrl+S like sane person
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
+" Map Ctrl+X to find+replace
+map <C-x> :%s ///g<C-left><right>
 
 " Start NerdTree unless a file was specificed
 let g:NERDTreeWinSize=20
@@ -37,4 +40,4 @@ au BufRead,BufNewFile Capfile setfiletype ruby
 
 
 " CtrlP
-set wildignore+=*\\public\\*,*/public/*
+set wildignore+="*/public/*,*/node_modules/*"

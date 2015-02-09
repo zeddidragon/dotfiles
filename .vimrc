@@ -40,4 +40,4 @@ au BufRead,BufNewFile Capfile setfiletype ruby
 
 
 " CtrlP
-set wildignore+="*/public/*,*/node_modules/*"
+set wildignore+=*/public/*,*/node_modules/*

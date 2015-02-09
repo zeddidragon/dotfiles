@@ -17,6 +17,9 @@ inoremap <C-s> <esc>:w<cr>a
 " Map Ctrl+X to find+replace
 map <C-x> :%s ///g<C-left><right>
 
+" Clear search command
+command C let @/=""
+
 " Start NerdTree unless a file was specificed
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2

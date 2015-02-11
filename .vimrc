@@ -35,8 +35,9 @@ vnoremap y "+y
 set colorcolumn=80
 
 set smartindent
-set tabstop=2
+set tabstop=8
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 au BufRead,BufNewFile *.jbuilder setfiletype ruby
 au BufRead,BufNewFile Capfile setfiletype ruby

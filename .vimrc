@@ -18,7 +18,7 @@ inoremap <C-s> <esc>:w<cr>a
 map <C-x> :%s ///g<C-left><right>
 
 " Clear search command
-command C let @/=""
+command! C let @/=""
 
 " Start NerdTree unless a file was specificed
 let g:NERDTreeWinSize=20
@@ -43,4 +43,4 @@ au BufRead,BufNewFile Capfile setfiletype ruby
 
 
 " CtrlP
-set wildignore+=*/public/*,*/node_modules/*
+set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc

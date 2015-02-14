@@ -42,6 +42,8 @@ set expandtab
 au BufRead,BufNewFile *.jbuilder setfiletype ruby
 au BufRead,BufNewFile Capfile setfiletype ruby
 
+au BufRead,BufNewFile *.kv setfiletype kivy
+
 
 " CtrlP
 set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc

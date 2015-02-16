@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
+# Look in $HOME/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME='robbyrussell'
@@ -38,8 +38,8 @@ ZSH_THEME='robbyrussell'
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load? (plugins can be found in $HOME/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git mercurial colorize)
 
@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="~/.rbenv/shims:~/.rbenv/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.linuxbrew/bin"
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.linuxbrew/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -61,17 +61,17 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="$HOME/.ssh/dsa_id"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias bex='bundle exec '
-alias zshconf='vim ~/.zshrc'
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias ratconf='vim ~/.ratpoisonrc'
-alias woofbet='cd ~/git/woofbet'
+alias zshconf='vim $HOME/.zshrc'
+alias ohmyzsh="vim $HOME/.oh-my-zsh"
+alias ratconf='vim $HOME/.ratpoisonrc'
+alias woofbet='cd $HOME/git/woofbet'
 alias clip='xclip -i -selection clipboard'
-alias copydb='scp test.woofbet.com:~/woofbet_play_production.sql tmp/woofbet_play_development.sql'
+alias copydb='scp test.woofbet.com:$HOME/woofbet_play_production.sql tmp/woofbet_play_development.sql'
 
 # Open new tab in the current directory
 [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
@@ -80,6 +80,6 @@ alias copydb='scp test.woofbet.com:~/woofbet_play_production.sql tmp/woofbet_pla
 export PATH="/usr/local/heroku/bin:$PATH"
 . /etc/profile.d/vte.sh
 
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm use 0

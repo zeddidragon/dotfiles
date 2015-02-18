@@ -1,0 +1,8 @@
+def p_passwords pass='p'
+  pass = User.new(password: pass).encrypted_password
+  User.update_all(encrypted_password: pass)
+end
+
+def give_money user, amount
+  Account.manual_credit_account.transfer(Woof.money(amount), user.account)
+end

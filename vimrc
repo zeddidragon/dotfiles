@@ -20,12 +20,6 @@ map <C-x> :%s ///g<C-left><right>
 " Clear search command
 command! C let @/=""
 
-" Start NerdTree unless a file was specificed
-let g:NERDTreeWinSize=20
-let g:NERDTreeChDirMode=2
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 " Make yank copy to clipboard
 set clipboard=unnamedplus
 nnoremap y "+y
@@ -42,3 +36,27 @@ set expandtab
 
 " CtrlP
 set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc
+
+" NERDTree
+" Check if NERDTree is open or active
+function! rc:isNERDTreeOpen()        
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+ 
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! rc:syncTree()
+  if &modifiable && rc:isNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+ 
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call rc:syncTree()
+
+" Start NerdTree unless a file was specificed
+let g:NERDTreeWinSize=20
+let g:NERDTreeChDirMode=2
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

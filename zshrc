@@ -85,3 +85,5 @@ export NVM_DIR="$HOME/.nvm"
 nvm use 0 > /dev/null
 
 alias xclip="xclip -selection c"
+
+. "$HOME/z.sh"

@@ -1,3 +1,33 @@
 [submodule "vimfiles/bundle/vim-colors-solarized"]
 	path = vimfiles/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "vimfiles/bundle/syntastic"]
+	path = vimfiles/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "vimfiles/bundle/nerdtree"]
+	path = vimfiles/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vimfiles/bundle/vim-jade"]
+	path = vimfiles/bundle/vim-jade
+	url = https://github.com/digitaltoad/vim-jade
+[submodule "vimfiles/bundle/gruvbox"]
+	path = vimfiles/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vimfiles/bundle/vim-coffee-script"]
+	path = vimfiles/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
+[submodule "vimfiles/bundle/vim-gitgutter"]
+	path = vimfiles/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vimfiles/bundle/html5.vim"]
+	path = vimfiles/bundle/html5.vim
+	url = https://github.com/othree/html5.vim
+[submodule "vimfiles/bundle/scss-syntax.vim"]
+	path = vimfiles/bundle/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "vimfiles/bundle/emmet-vim"]
+	path = vimfiles/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "vimfiles/bundle/ctrlp.vim"]
+	path = vimfiles/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim

@@ -25,3 +25,9 @@
 [submodule "vimfiles/bundle/emmet-vim"]
 	path = vimfiles/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "hexchat"]
+	path = hexchat
+	url = https://github.com/zeddidragon/hexchat-click
+[submodule "vimfiles/bundle/ctrlp.vim"]
+	path = vimfiles/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim

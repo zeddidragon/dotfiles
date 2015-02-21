@@ -40,6 +40,12 @@ inoremap <C-s> <esc>:w<cr>a
 " Map Ctrl+X to find+replace
 map <C-x> :%s ///g<C-left><right>
 
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Clear search command
 command! C let @/=""
 

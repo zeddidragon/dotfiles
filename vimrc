@@ -33,11 +33,15 @@ set noswapfile
 
 set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
-" Map saving to Ctrl+S like sane person
+" Saving to Ctrl+S like sane person
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
-" Map Ctrl+X to find+replace
-map <C-x> :%s ///g<C-left><right>
+" Ctrl+X to find+replace
+nnoremap <C-x> :%s ///g<C-left><right>
+inoremap <C-x> <esc>:%s ///g<C-left><right>
+vnoremap <C-x> :s ///g<C-left><righ>
+" Tab to autocomplete paths
+imap <Tab> <C-x><C-f>
 
 " Easy window navigation
 map <C-h> <C-w>h

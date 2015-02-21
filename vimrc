@@ -3,13 +3,36 @@ execute pathogen#infect()
 " Enable defaults that really should've been enabled in the first place
 syntax on
 filetype plugin indent on
+let g:gruvbox_italic=0
 colorscheme gruvbox
+" Let me keep my transparent background
+set t_Co=256
 set background=dark
+hi Normal ctermbg=none
+hi NonText ctermbg=none
 set ruler
 set backspace=2
 set number
 set incsearch
 set hlsearch
+set hidden
+set nowrap
+set autoindent
+set colorcolumn=80
+set tabstop=8
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set showmatch
+set history=1000
+set undolevels=1000
+set title
+set visualbell
+set noerrorbells
+set nobackup
+set noswapfile
+
+set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
 " Map saving to Ctrl+S like sane person
 nnoremap <C-s> :w<cr>
@@ -25,19 +48,6 @@ set clipboard=unnamedplus
 nnoremap y "+y
 vnoremap y "+y
 
-" Ruby things
-set colorcolumn=80
-
-set smartindent
-set tabstop=8
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" CtrlP
-set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc
-
-" NERDTree
 " Check if NERDTree is open or active
 function! rc:isNERDTreeOpen()        
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)

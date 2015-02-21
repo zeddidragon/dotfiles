@@ -86,4 +86,14 @@ nvm use 0 > /dev/null
 
 alias xclip="xclip -selection c"
 
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+
+# Allow saving with Ctrl-S in terminal vim
+vim() STTY=-ixon command vim "$@"
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# z.sh
 . "$HOME/z.sh"

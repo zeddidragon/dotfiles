@@ -31,3 +31,6 @@
 [submodule "vimfiles/bundle/ctrlp.vim"]
 	path = vimfiles/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+[submodule "vimfiles/bundle/mustang-vim"]
+	path = vimfiles/bundle/mustang-vim
+	url = https://github.com/croaker/mustang-vim

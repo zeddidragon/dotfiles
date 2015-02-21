@@ -9,7 +9,6 @@ colorscheme gruvbox
 set t_Co=256
 set background=dark
 hi Normal ctermbg=none
-hi NonText ctermbg=none
 set ruler
 set backspace=2
 set number

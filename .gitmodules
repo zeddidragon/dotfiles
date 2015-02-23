@@ -34,3 +34,6 @@
 [submodule "vimfiles/bundle/mustang-vim"]
 	path = vimfiles/bundle/mustang-vim
 	url = https://github.com/croaker/mustang-vim
+[submodule "vimfiles/bundle/vim-stylus"]
+	path = vimfiles/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus

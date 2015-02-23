@@ -39,9 +39,9 @@ inoremap <C-s> <esc>:w<cr>a
 " Ctrl+X to find+replace
 nnoremap <C-x> :%s ///g<C-left><right>
 inoremap <C-x> <esc>:%s ///g<C-left><right>
-vnoremap <C-x> :s ///g<C-left><righ>
+vnoremap <C-x> :s ///g<C-left><right>
 " Tab to autocomplete paths
-imap <Tab> <C-x><C-f>
+imap <C-space> <C-x><C-f>
 
 " Easy window navigation
 map <C-h> <C-w>h

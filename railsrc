@@ -6,3 +6,10 @@ end
 def give_money user, amount
   Account.manual_credit_account.transfer(Woof.money(amount), user.account)
 end
+
+def reset_match match
+  RealMatchParticipation.where(real_match: match).delete_all
+  RealMatchEvent.where(real_match: match).delete_all
+  RealPlayerMatchStats.where(real_match: match).delete_all
+  match.update!(has_ended: false, f8_confirmed: false, f32_confirmed: false)
+end

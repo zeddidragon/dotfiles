@@ -37,3 +37,9 @@
 [submodule "vimfiles/bundle/nerdtree-git-plugin"]
 	path = vimfiles/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "vimfiles/bundle/vim-stylus"]
+	path = vimfiles/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus
+[submodule "vimfiles/bundle/vim-glsl"]
+	path = vimfiles/bundle/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl

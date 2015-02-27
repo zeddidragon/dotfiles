@@ -40,3 +40,6 @@
 [submodule "vimfiles/bundle/vim-glsl"]
 	path = vimfiles/bundle/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl
+[submodule "z"]
+	path = z
+	url = https://github.com/rupa/z

@@ -4,18 +4,14 @@
 require 'fileutils'
 
 def symlink to, as
+  to = File.join Dir.pwd, to
+  as = File.join Dir.home, as
   FileUtils.remove_entry as if File.exists? as
   FileUtils.ln_s to, as, force: true, verbose: true
 end
 
-files = Dir.glob('*') - [__FILE__, 'vimfiles']
+files = Dir.glob('*') - [__FILE__, 'vimfiles', 'z']
 
-files.each do |file|
-  to = File.join Dir.pwd, file
-  as = File.join Dir.home, ".#{file}"
-  symlink to, as
-end
-
-to = File.join Dir.pwd, 'vimfiles'
-as = File.join Dir.home, '.vim'
-symlink to, as
+files.each{|file| symlink file, ".#{file}"}
+symlink 'vimfiles', '.vim'
+symlink 'z/z.sh', 'z.sh'

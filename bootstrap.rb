@@ -1,14 +1,21 @@
 # dotfiles bootstrapper, written exactly as advanced as I currently need it
 # if you had something already that matches the dotfile name,
-# then tough, it's getting overwritten
+# then tough, it's getting deleted
 require 'fileutils'
+
+def symlink to, as
+  FileUtils.remove_entry as if File.exists? as
+  FileUtils.ln_s to, as, force: true, verbose: true
+end
 
 files = Dir.glob('*') - [__FILE__, 'vimfiles']
 
 files.each do |file|
   to = File.join Dir.pwd, file
   as = File.join Dir.home, ".#{file}"
-  FileUtils.ln_s to, as, force: true, verbose: true
+  symlink to, as
 end
 
-FileUtils.ln_s File.join(Dir.pwd, 'vimfiles'), File.join(Dir.home, '.vim'), force: true, verbose: true
+to = File.join Dir.pwd, 'vimfiles'
+as = File.join Dir.home, '.vim'
+symlink to, as

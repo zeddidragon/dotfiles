@@ -46,3 +46,6 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z
+[submodule "vimfiles/bundle/vim-slim"]
+	path = vimfiles/bundle/vim-slim
+	url = https://github.com/slim-template/vim-slim

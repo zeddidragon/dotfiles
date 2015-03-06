@@ -40,6 +40,8 @@ inoremap <C-s> <esc>:w<cr>a
 nnoremap æ :%s ///g<C-left><right>
 inoremap æ <esc>:%s ///g<C-left><right>
 vnoremap æ :s ///g<C-left><righ>
+
+nnoremap ø :NERDTreeFind<cr>
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>
 

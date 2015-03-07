@@ -39,7 +39,7 @@ inoremap <C-s> <esc>:w<cr>a
 " Ctrl+X to find+replace
 nnoremap æ :%s ///g<C-left><right>
 inoremap æ <esc>:%s ///g<C-left><right>
-vnoremap æ :s ///g<C-left><righ>
+vnoremap æ :s ///g<C-left><right>
 
 nnoremap ø :NERDTreeFind<cr>
 " Tab to autocomplete paths

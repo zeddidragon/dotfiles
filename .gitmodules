@@ -34,6 +34,9 @@
 [submodule "vimfiles/bundle/mustang-vim"]
 	path = vimfiles/bundle/mustang-vim
 	url = https://github.com/croaker/mustang-vim
+[submodule "vimfiles/bundle/nerdtree-git-plugin"]
+	path = vimfiles/bundle/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
 [submodule "vimfiles/bundle/vim-stylus"]
 	path = vimfiles/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus
@@ -49,3 +52,9 @@
 [submodule "vimfiles/bundle/vim-markdown"]
 	path = vimfiles/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
+[submodule "vimfiles/bundle/vim-slim"]
+	path = vimfiles/bundle/vim-slim
+	url = https://github.com/slim-template/vim-slim
+[submodule "hexchat-click"]
+	path = hexchat-click
+	url = git@github.com:zeddidragon/hexchat-click.git

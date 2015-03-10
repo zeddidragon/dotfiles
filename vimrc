@@ -37,9 +37,11 @@ set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
 " Ctrl+X to find+replace
-nnoremap <C-x> :%s ///g<C-left><right>
-inoremap <C-x> <esc>:%s ///g<C-left><right>
-vnoremap <C-x> :s ///g<C-left><right>
+nnoremap æ :%s ///g<C-left><right>
+inoremap æ <esc>:%s ///g<C-left><right>
+vnoremap æ :s ///g<C-left><right>
+
+nnoremap ø :NERDTreeFind<cr>
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>
 
@@ -71,9 +73,6 @@ function! rc:syncTree()
   endif
 endfunction
  
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call rc:syncTree()
-
 " Start NerdTree unless a file was specificed
 let g:NERDTreeWinSize=20
 let g:NERDTreeChDirMode=2

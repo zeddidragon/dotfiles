@@ -46,6 +46,12 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z
+[submodule "vimfiles/bundle/vim-haml"]
+	path = vimfiles/bundle/vim-haml
+	url = https://github.com/tpope/vim-haml
+[submodule "vimfiles/bundle/vim-markdown"]
+	path = vimfiles/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
 [submodule "vimfiles/bundle/vim-slim"]
 	path = vimfiles/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim

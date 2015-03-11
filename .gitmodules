@@ -52,3 +52,6 @@
 [submodule "hexchat-click"]
 	path = hexchat-click
 	url = git@github.com:zeddidragon/hexchat-click.git
+[submodule "vimfiles/bundle/dart-vim-plugin"]
+	path = vimfiles/bundle/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin

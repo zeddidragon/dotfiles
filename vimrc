@@ -36,9 +36,11 @@ set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*
 " Bind to save 
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
-" Bind to find+replace
+
+" Bind to find + ræplace
 nnoremap æ :%s ///g<C-left><right>
 vnoremap æ :s ///g<C-left><right>
+
 " Bind to Reveal in Nørdtree
 nnoremap ø :NERDTreeFind<cr>
 " Tab to autocomplete paths

@@ -33,13 +33,14 @@ set noswapfile
 
 set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
-" Saving to Ctrl+S like sane person
+" Bind to save 
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
-" Ctrl+X to find+replace
+" Bind to find+replace
 nnoremap æ :%s ///g<C-left><right>
-inoremap æ <esc>:%s ///g<C-left><right>
-vnoremap æ :s ///g<C-left><righ>
+vnoremap æ :s ///g<C-left><right>
+" Bind to Reveal in Nørdtree
+nnoremap ø :NERDTreeFind<cr>
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>
 

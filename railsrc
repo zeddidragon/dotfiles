@@ -7,6 +7,13 @@ def give_money user, amount
   Account.manual_credit_account.transfer(Woof.money(amount), user.account)
 end
 
+def verify user
+  AccountVerification::VERIFICATION_ATTRIBUTES.each do |attr|
+    user.account_verification.send "#{attr}=", '1'
+  end
+  user.account_verification.verified!
+end
+
 def reset_match match
   RealMatchParticipation.where(real_match: match).delete_all
   RealMatchEvent.where(real_match: match).delete_all

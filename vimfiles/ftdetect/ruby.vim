@@ -1,1 +1,1 @@
-au BufRead,BufNewFile Capfile,*.jbuilder,*.railsrc setfiletype ruby
+au BufRead,BufNewFile Capfile,*.jbuilder,*.railsrc,railsrc setfiletype ruby

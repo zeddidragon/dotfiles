@@ -4,7 +4,7 @@ def p_passwords pass='p'
 end
 
 def give_money user, amount
-  Account.manual_credit_account.transfer(Woof.money(amount), user.account)
+  Account.manual_credit_account.transfer(Woof.money(amount), user.account, "", :manual_credit)
 end
 
 def verify user

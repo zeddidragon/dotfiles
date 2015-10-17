@@ -73,12 +73,8 @@ alias woofbet='cd $HOME/git/woofbet'
 alias clip='xclip -i -selection clipboard'
 alias copydb='scp test.woofbet.com:$HOME/woofbet_play_production.sql tmp/woofbet_play_development.sql'
 
-# Open new tab in the current directory
-[[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-. /etc/profile.d/vte.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

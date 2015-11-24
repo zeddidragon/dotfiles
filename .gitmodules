@@ -65,3 +65,6 @@
 	path = hexchat-click
 	url = git@github.com:zeddidragon/hexchat-click.git
 
+[submodule "vimfiles/bundle/inline_edit"]
+	path = vimfiles/bundle/inline_edit
+	url = git://github.com/AndrewRadev/inline_edit.vim.git

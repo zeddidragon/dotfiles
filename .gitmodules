@@ -61,3 +61,7 @@
 [submodule "vimfiles/bundle/vim-es6"]
 	path = vimfiles/bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
+[submodule "hexchat-click"]
+	path = hexchat-click
+	url = git@github.com:zeddidragon/hexchat-click.git
+

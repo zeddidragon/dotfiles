@@ -60,23 +60,6 @@ set clipboard=unnamedplus
 nnoremap y "+y
 vnoremap y "+y
 
-" Check if NERDTree is open or active
-function! rc:isNERDTreeOpen()        
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
- 
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! rc:syncTree()
-  if &modifiable && rc:isNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
- 
-" Start NerdTree unless a file was specificed
-let g:NERDTreeWinSize=20
-let g:NERDTreeChDirMode=2
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 

@@ -58,3 +58,6 @@
 [submodule "vimfiles/bundle/dart-vim-plugin"]
 	path = vimfiles/bundle/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin
+[submodule "vimfiles/bundle/vim-es6"]
+	path = vimfiles/bundle/vim-es6
+	url = https://github.com/isRuslan/vim-es6.git

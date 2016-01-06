@@ -68,3 +68,12 @@
 [submodule "vimfiles/bundle/inline_edit"]
 	path = vimfiles/bundle/inline_edit
 	url = git://github.com/AndrewRadev/inline_edit.vim.git
+[submodule "vimfiles/bundle/vim-jsdoc"]
+	path = vimfiles/bundle/vim-jsdoc
+	url = https://github.com/heavenshell/vim-jsdoc
+[submodule "vimfiles/bundle/vim-javascript"]
+	path = vimfiles/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "vimfiles/bundle/yajs.vim"]
+	path = vimfiles/bundle/yajs.vim
+	url = https://github.com/othree/yajs.vim

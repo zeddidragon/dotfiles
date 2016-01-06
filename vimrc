@@ -30,6 +30,7 @@ set visualbell
 set noerrorbells
 set nobackup
 set noswapfile
+set nofoldenable  " fuck folding
 
 set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 

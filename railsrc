@@ -1,6 +1,9 @@
 def p_passwords pass='p'
   pass = User.new(password: pass).encrypted_password
-  User.update_all(encrypted_password: pass, otp_required_for_login: false)
+  User.update_all(encrypted_password: pass)
+  if User.connection.column_exists?(:users, :opt_required_for_login)
+    User.update_all(otp_required_for_login: false)
+  end
 end
 
 def give_money user, amount
@@ -20,3 +23,4 @@ def reset_match match
   RealPlayerMatchStats.where(real_match: match).delete_all
   match.update!(has_ended: false, f8_confirmed: false, f32_confirmed: false)
 end
+

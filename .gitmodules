@@ -25,9 +25,6 @@
 [submodule "vimfiles/bundle/scss-syntax.vim"]
 	path = vimfiles/bundle/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim
-[submodule "vimfiles/bundle/emmet-vim"]
-	path = vimfiles/bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim
 [submodule "vimfiles/bundle/ctrlp.vim"]
 	path = vimfiles/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
@@ -55,9 +52,6 @@
 [submodule "vimfiles/bundle/vim-slim"]
 	path = vimfiles/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim
-[submodule "vimfiles/bundle/dart-vim-plugin"]
-	path = vimfiles/bundle/dart-vim-plugin
-	url = https://github.com/dart-lang/dart-vim-plugin
 [submodule "vimfiles/bundle/vim-es6"]
 	path = vimfiles/bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
@@ -65,24 +59,12 @@
 	path = hexchat-click
 	url = git@github.com:zeddidragon/hexchat-click.git
 
-[submodule "vimfiles/bundle/inline_edit"]
-	path = vimfiles/bundle/inline_edit
-	url = git://github.com/AndrewRadev/inline_edit.vim.git
 [submodule "vimfiles/bundle/vim-jsdoc"]
 	path = vimfiles/bundle/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc
 [submodule "vimfiles/bundle/vim-javascript"]
 	path = vimfiles/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule "vimfiles/bundle/yajs.vim"]
-	path = vimfiles/bundle/yajs.vim
-	url = https://github.com/othree/yajs.vim
-[submodule "vimfiles/bundle/ultisnips"]
-	path = vimfiles/bundle/ultisnips
-	url = git://github.com/SirVer/ultisnips.git
-[submodule "vimfiles/bundle/vim-snippets"]
-	path = vimfiles/bundle/vim-snippets
-	url = git://github.com/honza/vim-snippets.git
 [submodule "vimfiles/bundle/swift.vim"]
 	path = vimfiles/bundle/swift.vim
 	url = https://github.com/keith/swift.vim.git

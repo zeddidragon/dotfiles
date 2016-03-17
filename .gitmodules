@@ -77,3 +77,12 @@
 [submodule "vimfiles/bundle/yajs.vim"]
 	path = vimfiles/bundle/yajs.vim
 	url = https://github.com/othree/yajs.vim
+[submodule "vimfiles/bundle/ultisnips"]
+	path = vimfiles/bundle/ultisnips
+	url = git://github.com/SirVer/ultisnips.git
+[submodule "vimfiles/bundle/vim-snippets"]
+	path = vimfiles/bundle/vim-snippets
+	url = git://github.com/honza/vim-snippets.git
+[submodule "vimfiles/bundle/swift.vim"]
+	path = vimfiles/bundle/swift.vim
+	url = https://github.com/keith/swift.vim.git

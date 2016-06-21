@@ -95,3 +95,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
+eval "$(rbenv init -)"

@@ -44,6 +44,7 @@ vnoremap æ :s ///g<C-left><right>
 
 " Bind to Reveal in Nørdtree
 nnoremap ø :NERDTreeFind<cr>
+let g:NERDTreeWinSize = 20
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>
 

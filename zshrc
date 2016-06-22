@@ -63,7 +63,6 @@ fi
 # ssh
 # export SSH_KEY_PATH="$HOME/.ssh/dsa_id"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias bex='bundle exec '
 alias zshconf='vim $HOME/.zshrc'
@@ -77,7 +76,11 @@ alias copydb='scp test.woofbet.com:$HOME/woofbet_play_production.sql tmp/woofbet
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+if hash brew 2>/dev/null; then
+  . "$(brew --prefix nvm)/nvm.sh"
+else
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
 
 alias xclip="xclip -selection c"
 

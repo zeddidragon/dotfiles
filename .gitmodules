@@ -68,3 +68,6 @@
 [submodule "vimfiles/bundle/vim-css-color"]
 	path = vimfiles/bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color
+[submodule "vimfiles/bundle/elm-vim"]
+	path = vimfiles/bundle/elm-vim
+	url = https://github.com/ElmCast/elm-vim

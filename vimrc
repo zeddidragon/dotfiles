@@ -61,6 +61,8 @@ command! C let @/=""
 set clipboard=unnamedplus
 nnoremap y "+y
 vnoremap y "+y
+" What is even an Ex mode go away
+nnoremap Q <Nop>
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

@@ -3,8 +3,7 @@ execute pathogen#infect()
 " Enable defaults that really should've been enabled in the first place
 syntax on
 filetype plugin indent on
-let g:gruvbox_italic=0
-colorscheme gruvbox
+colorscheme xoria256
 " Let me keep my transparent background
 set t_Co=256
 set background=dark

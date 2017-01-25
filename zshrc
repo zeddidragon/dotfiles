@@ -107,3 +107,4 @@ if [ "$COLORTERM" == "gnome-terminal" ]; then
 fi 
 
 export HISTCONTROL=ignorespace
+ssh-add

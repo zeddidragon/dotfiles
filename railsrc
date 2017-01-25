@@ -24,3 +24,4 @@ def reset_match match
   match.update!(has_ended: false, f8_confirmed: false, f32_confirmed: false)
 end
 
+BigDecimal.redefine_method(:inspect){to_s}

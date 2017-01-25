@@ -55,7 +55,6 @@
 [submodule "hexchat-click"]
 	path = hexchat-click
 	url = git@github.com:zeddidragon/hexchat-click.git
-
 [submodule "vimfiles/bundle/vim-jsdoc"]
 	path = vimfiles/bundle/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc
@@ -68,6 +67,6 @@
 [submodule "vimfiles/bundle/vim-css-color"]
 	path = vimfiles/bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color
-[submodule "vimfiles/bundle/--force"]
-	path = vimfiles/bundle/--force
-	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vimfiles/bundle/elm-vim"]
+	path = vimfiles/bundle/elm-vim
+	url = https://github.com/ElmCast/elm-vim

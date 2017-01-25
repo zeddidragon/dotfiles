@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.pug set filetype=jade
+au BufRead,BufNewFile *.pug, *.jade set filetype=pug

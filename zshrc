@@ -44,6 +44,7 @@ ZSH_THEME='robbyrussell'
 plugins=(git mercurial colorize)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.tmuxinator.zsh
 
 # User configuration
 

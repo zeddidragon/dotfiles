@@ -57,7 +57,7 @@ map <C-l> <C-w>l
 command! C let @/=""
 
 " Make yank copy to clipboard
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 nnoremap y "+y
 vnoremap y "+y
 " What is even an Ex mode go away

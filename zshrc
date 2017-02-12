@@ -66,12 +66,8 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias bex='bundle exec '
-alias zshconf='vim $HOME/.zshrc'
-alias ohmyzsh="vim $HOME/.oh-my-zsh"
-alias ratconf='vim $HOME/.ratpoisonrc'
-alias woofbet='cd $HOME/git/woofbet'
 alias clip='xclip -i -selection clipboard'
-alias copydb='scp test.woofbet.com:$HOME/woofbet_play_production.sql tmp/woofbet_play_development.sql'
+alias tm='tmux -2'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

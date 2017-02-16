@@ -66,22 +66,14 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias bex='bundle exec '
-alias zshconf='vim $HOME/.zshrc'
-alias ohmyzsh="vim $HOME/.oh-my-zsh"
-alias ratconf='vim $HOME/.ratpoisonrc'
-alias woofbet='cd $HOME/git/woofbet'
 alias clip='xclip -i -selection clipboard'
-alias copydb='scp test.woofbet.com:$HOME/woofbet_play_production.sql tmp/woofbet_play_development.sql'
+alias tm='tmux -2'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-if hash brew 2>/dev/null; then
-  . "$(brew --prefix nvm)/nvm.sh"
-else
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-fi
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias xclip="xclip -selection c"
 
@@ -102,10 +94,6 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 eval "$(rbenv init -)"
 
 alias glhf="git pull --rebase && git push"
-
-if [ "$COLORTERM" == "gnome-terminal" ]; then 
-  export TERM=xterm-256color 
-fi 
 
 export HISTCONTROL=ignorespace
 ssh-add

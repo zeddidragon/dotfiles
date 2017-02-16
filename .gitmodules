@@ -73,3 +73,6 @@
 [submodule "vimfiles/bundle/vim-toml"]
 	path = vimfiles/bundle/vim-toml
 	url = https://github.com/cespare/vim-toml.git
+[submodule "vimfiles/bundle/vim-markdown-preview"]
+	path = vimfiles/bundle/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview.git

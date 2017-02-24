@@ -73,3 +73,6 @@
 [submodule "vimfiles/bundle/vim-toml"]
 	path = vimfiles/bundle/vim-toml
 	url = https://github.com/cespare/vim-toml.git
+[submodule "vimfiles/bundle/vim-elixir"]
+	path = vimfiles/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git

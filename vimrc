@@ -69,3 +69,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 . "$HOME/z.sh"
 
 silent! source .vimrc
+
+" Syntastic will just throw fits with Android packages
+let g:loaded_syntastic_java_javac_checker = 1

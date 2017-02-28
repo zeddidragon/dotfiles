@@ -60,7 +60,7 @@
 	url = https://github.com/heavenshell/vim-jsdoc
 [submodule "vimfiles/bundle/vim-javascript"]
 	path = vimfiles/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
 [submodule "vimfiles/bundle/swift.vim"]
 	path = vimfiles/bundle/swift.vim
 	url = https://github.com/keith/swift.vim.git

@@ -72,3 +72,9 @@ silent! source .vimrc
 
 " Syntastic will just throw fits with Android packages
 let g:loaded_syntastic_java_javac_checker = 1
+
+" Scroll through time!
+set mouse=a
+nnoremap <ScrollWheelUp> g-
+nnoremap <ScrollWheelDown> g+
+

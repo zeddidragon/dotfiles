@@ -72,3 +72,6 @@ silent! source .vimrc
 
 " Syntastic will just throw fits with Android packages
 let g:loaded_syntastic_java_javac_checker = 1
+
+" Ignore more garbage with Ctrl-P
+let g:ctrlp_custom_ignore = 'node_modules\|tmp\|examples'

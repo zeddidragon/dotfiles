@@ -49,7 +49,7 @@ syn keyword sqlKeyword      referencing release resource return role row
 syn keyword sqlKeyword      rowlabel rownum rows schema session share size
 syn keyword sqlKeyword      start successful synonym then to transaction trigger
 syn keyword sqlKeyword      uid user using validate values view virtual whenever
-syn keyword sqlKeyword      where with lateral
+syn keyword sqlKeyword      where with lateral cross limit
 syn match   sqlKeyword      "\<prompt\>"
 syn match   sqlKeyword      "\<glob\>"
 " Do special things with CREATE TABLE ( below.
@@ -87,7 +87,7 @@ syn match   sqlFunction     "\<\(\w\+\)(\@="
 syn keyword sqlStatement    alter analyze audit begin comment commit delete
 syn keyword sqlStatement    drop execute explain grant insert lock noaudit
 syn keyword sqlStatement    rename revoke rollback savepoint select
-syn keyword sqlStatement    truncate update vacuum excluded
+syn keyword sqlStatement    truncate update vacuum excluded returning
 syn match   sqlStatement    "\<\(replace\|create\)\>"
 
 " SQLite Statements

@@ -1,4 +1,7 @@
 require 'bigdecimal'
+require 'irb/ext/save-history'
+IRB.conf[:SAVE_HISTORY] = 200
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
 
 railsrc_path = File.expand_path('~/.railsrc')
 if ( ENV['RAILS_ENV'] || defined? Rails ) && File.exist?( railsrc_path )

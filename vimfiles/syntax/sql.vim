@@ -22,7 +22,6 @@ syn case ignore
 syn cluster sqlALL          contains=TOP
 
 " Various error conditions.
-syn match   sqlError        "\<\w\+("           " Not a known function.
 syn match   sqlError        ")"                 " Lonely closing paren.
 syn match   sqlError        ",\(\_\s*[;)]\)\@=" " Comma before a paren or semicolon.
 syn match   sqlError        " $"                " Space at the end of a line.
@@ -50,7 +49,7 @@ syn keyword sqlKeyword      referencing release resource return role row
 syn keyword sqlKeyword      rowlabel rownum rows schema session share size
 syn keyword sqlKeyword      start successful synonym then to transaction trigger
 syn keyword sqlKeyword      uid user using validate values view virtual whenever
-syn keyword sqlKeyword      where with
+syn keyword sqlKeyword      where with lateral cross limit
 syn match   sqlKeyword      "\<prompt\>"
 syn match   sqlKeyword      "\<glob\>"
 " Do special things with CREATE TABLE ( below.
@@ -76,37 +75,19 @@ syn keyword sqlKeyword      user_version vdbe_listing vdbe_trace
 syn keyword sqlKeyword      wal_autocheckpoint wal_checkpoint writable_schema
 
 " Operators
-syn keyword sqlOperator     all and any between case distinct elif else end
-syn keyword sqlOperator     exists if in intersect is like match matches minus
-syn keyword sqlOperator     not or out prior regexp some then union unique when
-syn match   sqlOperator     "||\|:="
+syn keyword sqlKeyword     all and any between case distinct elif else end
+syn keyword sqlKeyword     exists if in intersect is like match matches minus
+syn keyword sqlKeyword     not or out prior regexp some then union unique when
+syn match   sqlKeyword     "||\|:="
 
-" Functions - Only valid with a '(' after them.
-syn match   sqlFunction     "\<\(abs\|acos\|asin\|atan2\?\|avg\|cardinality\)(\@="
-syn match   sqlFunction     "\<\(cast\|changes\|char_length\|character_length\)(\@="
-syn match   sqlFunction     "\<\(coalesce\|cos\|count\|\(date\)\?\(time\)\?\)(\@="
-syn match   sqlFunction     "\<\(exp\|filetoblob\|filetoclob\|glob\|group_concat\)(\@="
-syn match   sqlFunction     "\<\(hex\|ifnull\|initcap\|isnull\|julianday\|last_insert_rowid\)(\@="
-syn match   sqlFunction     "\<\(length\|log10\|logn\|lower\|lpad\|ltrin\|max\|min\)(\@="
-syn match   sqlFunction     "\<\(mod\|nullif\|octet_length\|pow\|quote\|random\)(\@="
-syn match   sqlFunction     "\<\(range\|replace\|root\|round\|rpad\|sin\|soundex\)(\@="
-syn match   sqlFunction     "\<\(sqrtstdev\|strftime\|substr\|substring\|sum\|sysdate\|tan\)(\@="
-syn match   sqlFunction     "\<\(to_char\|to_date\|total\|trim\|trunc\|typeof\)(\@="
-syn match   sqlFunction     "\<\(upper\|variance\)(\@="
-
-" SQLite Functions
-syn match   sqlFunction     "\<\(last_insert_rowid\|load_extension\|randomblob\)(\@="
-syn match   sqlFunction     "\<\(sqlite_compileoption_get\|sqlite_compileoption_used\)(\@="
-syn match   sqlFunction     "\<\(sqlite_source_id\|sqlite_version\|sqlite_version\)(\@="
-syn match   sqlFunction     "\<\(zeroblob\|ltrim\|rtrim\)(\@="
-" SQLite Command Line Client Functions
-syn match   sqlFunction     "^\.\w\+"
+" All Functions
+syn match   sqlFunction     "\<\(\w\+\)(\@="
 
 " Statements
 syn keyword sqlStatement    alter analyze audit begin comment commit delete
 syn keyword sqlStatement    drop execute explain grant insert lock noaudit
 syn keyword sqlStatement    rename revoke rollback savepoint select
-syn keyword sqlStatement    truncate update vacuum
+syn keyword sqlStatement    truncate update vacuum excluded returning
 syn match   sqlStatement    "\<\(replace\|create\)\>"
 
 " SQLite Statements

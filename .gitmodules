@@ -77,3 +77,6 @@
 	path = vimfiles/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
 
+[submodule "vimfiles/bundle/YouCompleteMe"]
+	path = vimfiles/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

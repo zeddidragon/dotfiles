@@ -80,3 +80,6 @@
 [submodule "vimfiles/bundle/YouCompleteMe"]
 	path = vimfiles/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vimfiles/bundle/rust.vim"]
+	path = vimfiles/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git

@@ -31,7 +31,7 @@ set nobackup
 set noswapfile
 set nofoldenable  " fuck folding
 
-set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
+set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
 " Bind to save 
 nnoremap <C-s> :w<cr>

@@ -97,3 +97,5 @@ alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace
 ssh-add
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

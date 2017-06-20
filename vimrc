@@ -30,8 +30,10 @@ set noerrorbells
 set nobackup
 set noswapfile
 set nofoldenable  " fuck folding
+set splitbelow
+set splitright
 
-set wildignore+=*/public/*,*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
+set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
 " Bind to save 
 nnoremap <C-s> :w<cr>
@@ -41,11 +43,9 @@ inoremap <C-s> <esc>:w<cr>a
 nnoremap æ :%s ///g<C-left><right>
 vnoremap æ :s ///g<C-left><right>
 
-" Bind to Reveal in Nørdtree
-nnoremap ø :NERDTreeFind<cr>
-let g:NERDTreeWinSize = 20
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>
+set path +=**
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -64,14 +64,16 @@ vnoremap y "+y
 nnoremap Q <Nop>
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 . "$HOME/z.sh"
 
 silent! source .vimrc
 
-" Syntastic will just throw fits with Android packages
-let g:loaded_syntastic_java_javac_checker = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_javascript_checkers = ['eslint']
 
-" Ignore more garbage with Ctrl-P
-let g:ctrlp_custom_ignore = 'node_modules\|tmp\|examples'
+set rtp+=~/.fzf
+nnoremap <C-p> :FZF<CR>

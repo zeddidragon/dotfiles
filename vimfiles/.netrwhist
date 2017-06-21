@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/tony/Downloads/git/dotfiles/.git'
-let g:netrw_dirhist_2='/home/tony/git/sportyman/helpers/compute'
-let g:netrw_dirhist_3='/home/zeddy/git/sportyman/client/components/stats'
-let g:netrw_dirhist_4='/home/zeddy/git/sportyman/client/components'
-let g:netrw_dirhist_5='/home/zeddy/git/sportyman/client/components/golf-results'
-let g:netrw_dirhist_6='/home/zeddy/git/sportyman/client/components'
-let g:netrw_dirhist_7='/home/zeddy/git/sportyman/client'

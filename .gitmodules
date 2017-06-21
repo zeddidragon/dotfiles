@@ -1,12 +1,6 @@
-[submodule "vimfiles/bundle/vim-colors-solarized"]
-	path = vimfiles/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized
 [submodule "vimfiles/bundle/syntastic"]
 	path = vimfiles/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
-[submodule "vimfiles/bundle/nerdtree"]
-	path = vimfiles/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
 [submodule "vimfiles/bundle/vim-jade"]
 	path = vimfiles/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade
@@ -22,15 +16,6 @@
 [submodule "vimfiles/bundle/scss-syntax.vim"]
 	path = vimfiles/bundle/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim
-[submodule "vimfiles/bundle/ctrlp.vim"]
-	path = vimfiles/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
-[submodule "vimfiles/bundle/mustang-vim"]
-	path = vimfiles/bundle/mustang-vim
-	url = https://github.com/croaker/mustang-vim
-[submodule "vimfiles/bundle/nerdtree-git-plugin"]
-	path = vimfiles/bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
 [submodule "vimfiles/bundle/vim-stylus"]
 	path = vimfiles/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus
@@ -76,10 +61,6 @@
 [submodule "vimfiles/bundle/vim-elixir"]
 	path = vimfiles/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
-
-[submodule "vimfiles/bundle/YouCompleteMe"]
-	path = vimfiles/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vimfiles/bundle/rust.vim"]
 	path = vimfiles/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git

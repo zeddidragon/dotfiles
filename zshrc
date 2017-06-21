@@ -1,3 +1,5 @@
+# Source .bash_profile
+source $HOME/.bash_profile
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -97,3 +99,5 @@ alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace
 ssh-add
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

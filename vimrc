@@ -67,8 +67,6 @@ autocmd StdinReadPre * let s:std_in=1
 
 . "$HOME/z.sh"
 
-silent! source .vimrc
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

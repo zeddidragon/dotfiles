@@ -32,6 +32,7 @@ set noswapfile
 set nofoldenable  " fuck folding
 set splitbelow
 set splitright
+set laststatus=2  " Show statusbar even when not split
 
 set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
@@ -75,3 +76,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 set rtp+=~/.fzf
 nnoremap <C-p> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack

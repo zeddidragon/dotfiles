@@ -68,11 +68,8 @@ autocmd StdinReadPre * let s:std_in=1
 
 . "$HOME/z.sh"
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_javascript_checkers = ['eslint']
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 set rtp+=~/.fzf
 nnoremap <C-p> :FZF<CR>

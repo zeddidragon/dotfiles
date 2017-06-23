@@ -1,6 +1,3 @@
-[submodule "vimfiles/bundle/syntastic"]
-	path = vimfiles/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
 [submodule "vimfiles/bundle/vim-jade"]
 	path = vimfiles/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade

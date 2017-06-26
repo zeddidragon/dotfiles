@@ -67,3 +67,6 @@
 [submodule "vimfiles/bundle/neomake-local-eslint.vim"]
 	path = vimfiles/bundle/neomake-local-eslint.vim
 	url = https://github.com/benjie/neomake-local-eslint.vim.git
+[submodule "vimfiles/bundle/neomake"]
+        path = vimfiles/bundle/neomake
+        url = https://github.com/neomake/neomake.git

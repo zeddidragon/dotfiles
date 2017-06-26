@@ -64,3 +64,6 @@
 [submodule "vimfiles/bundle/ack.vim"]
 	path = vimfiles/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "vimfiles/bundle/neomake"]
+        path = vimfiles/bundle/neomake
+        url = https://github.com/neomake/neomake.git

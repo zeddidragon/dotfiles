@@ -40,6 +40,10 @@ set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
 
+" Bind to dølete line (without copying)
+nnoremap ø "_dd
+vnoremap ø "_d
+
 " Bind to find + ræplace
 nnoremap æ :%s ///g<C-left><right>
 vnoremap æ :s ///g<C-left><right>

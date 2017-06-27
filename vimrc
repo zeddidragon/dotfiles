@@ -85,3 +85,10 @@ let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev ag Ack
+
+" Rename
+function! Move(dest)
+  !mv % a:dest
+  e a:dest
+endfunction
+command! -nargs=1 -complete=file Mv call Move(<f-args>)

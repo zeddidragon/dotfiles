@@ -39,6 +39,7 @@ set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 " Bind to save 
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>a
+vnoremap <C-s> <esc>:w<cr>v
 
 " Bind to dølete line (without copying)
 nnoremap ø "_dd

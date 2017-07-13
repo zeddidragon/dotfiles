@@ -1,0 +1,52 @@
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+set realname="Tony A. Sæle"
+set folder=~/.mail
+set spoolfile=+inbox
+set postponed=+postponed
+set record="+Sent-`date +%Y`"
+set mailcap_path = ~/.mutt/mailcap
+set certificate_file = "~/.mutt/certificates"
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set mail_check = 25
+set timeout = 25
+set imap_keepalive = 90
+set imap_check_subscribed
+set arrow_cursor
+
+alternative_order text/plain text/enriched text/html
+auto_view text/html
+
+# highlight my name and other personally relevant strings
+color body  cyan  default "(tony|zeddy)"
+color body  cyan  default "(tony|zeddy)"
+color index default default ~P
+color index brightblack default ~R
+color normal	default default
+color attachment brightyellow default
+color hdrdefault brightblack default
+color indicator cyan default
+color markers	brightred default
+color quoted	green default
+color signature cyan default
+color status	cyan default
+color tilde	blue default
+color tree	red default
+
+bind index gg first-entry
+bind index 0  first-entry
+bind index G  last-entry
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager 0  top
+bind index $  imap-fetch-mail
+bind index S  sync-mailbox
+
+# source ~/.mutt/.muttrc.global
+# macro index <f1> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.global<enter><change-folder>!<enter>'
+# macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.gmail<enter><change-folder>!<enter>'
+# macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.live<enter><change-folder>!<enter>'
+# macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.hotmail<enter><change-folder>!<enter>'

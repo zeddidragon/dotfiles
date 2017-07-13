@@ -1,0 +1,11 @@
+source ~/.muttrc
+set imap_user = "account@example"
+set imap_pass = "correct battery horse staple"
+
+set from = $imap_user
+set hostname = "hostname.com"
+set folder = "imaps://imap-mail.outlook.com"
+set postponed = "+[provider]/Drafts"
+set spoolfile = "+INBOX"
+set smtp_url = "smtp://$imap_user@smtp-mail.outlook.com/"
+set smtp_pass = $imap_pass

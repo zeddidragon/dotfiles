@@ -8,3 +8,6 @@ custom
 !custom/example.zshcache
 cache/
 vimfiles/.netrwhist
+mutt/.muttrc.*
+mutt/certificates
+!mutt/.muttrc.example

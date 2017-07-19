@@ -29,7 +29,7 @@ set visualbell
 set noerrorbells
 set nobackup
 set noswapfile
-set nofoldenable  " fuck folding
+set nofoldenable
 set splitbelow
 set splitright
 set laststatus=2  " Show statusbar even when not split
@@ -48,6 +48,13 @@ vnoremap ø "_d
 " Bind to find + ræplace
 nnoremap æ :%s ///g<C-left><right>
 vnoremap æ :s ///g<C-left><right>
+
+" Bind to tåggle folds
+nnoremap å za
+vnoremap å za
+" Bind to Åpen folds
+nnoremap Å :set fdm=syntax<cr>
+vnoremap Å :set fdm=syntax<cr>
 
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>

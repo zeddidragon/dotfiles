@@ -53,8 +53,8 @@ vnoremap æ :s ///g<C-left><right>
 nnoremap å za
 vnoremap å za
 " Bind to Åpen folds
-nnoremap Å :set fdm=syntax<cr>
-vnoremap Å :set fdm=syntax<cr>
+nnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
+vnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
 
 " Tab to autocomplete paths
 imap <C-space> <C-x><C-f>
@@ -90,7 +90,7 @@ else
   set rtp+=~/.fzf
 endif
 nnoremap <C-p> :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -lg ""'
 
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev ag Ack

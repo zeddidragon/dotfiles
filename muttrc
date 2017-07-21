@@ -45,9 +45,3 @@ bind pager gg top
 bind pager 0  top
 bind index $  imap-fetch-mail
 bind index S  sync-mailbox
-
-# source ~/.mutt/.muttrc.global
-# macro index <f1> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.global<enter><change-folder>!<enter>'
-# macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.gmail<enter><change-folder>!<enter>'
-# macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.live<enter><change-folder>!<enter>'
-# macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/.muttrc.hotmail<enter><change-folder>!<enter>'

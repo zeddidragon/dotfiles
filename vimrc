@@ -14,7 +14,7 @@ set number
 set incsearch
 set hlsearch
 set hidden
-set wrap
+set nowrap
 set autoindent
 set colorcolumn=80
 set tabstop=8

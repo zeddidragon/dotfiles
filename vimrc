@@ -94,6 +94,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -lg ""'
 
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev ag Ack
+cnoreabbrev Ag Ack
 
 " Rename
 function! Move(dest)

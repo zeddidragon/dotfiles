@@ -34,6 +34,8 @@ set splitbelow
 set splitright
 set laststatus=2  " Show statusbar even when not split
 set backupcopy=yes
+set ignorecase
+set smartcase
 
 set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 

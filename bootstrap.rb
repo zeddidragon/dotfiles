@@ -10,7 +10,7 @@ def symlink to, as
   FileUtils.ln_s to, as, force: true, verbose: true
 end
 
-files = Dir.glob('*') - [__FILE__, 'vimfiles', 'z']
+files = Dir.glob('*') - [__FILE__, 'keymap.c', 'vimfiles', 'z']
 
 files.each{|file| symlink file, ".#{file}"}
 symlink 'vimfiles', '.vim'

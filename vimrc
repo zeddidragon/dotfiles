@@ -36,6 +36,7 @@ set laststatus=2  " Show statusbar even when not split
 set backupcopy=yes
 set ignorecase
 set smartcase
+set mouse=a " just to make it easier on colleagues
 
 set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 

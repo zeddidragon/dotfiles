@@ -86,7 +86,6 @@ autocmd StdinReadPre * let s:std_in=1
 
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_elixir_enabled_makers = ['credo']
 
 if executable("brew")
   set rtp+=/usr/local/opt/fzf

@@ -52,7 +52,7 @@ source ~/.tmuxinator.zsh
 
 # User configuration
 
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.linuxbrew/bin"
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -73,7 +73,13 @@ alias clip='xclip -i -selection clipboard'
 alias tm='tmux -2'
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+if [ $IS_WSL ]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
+  export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
+  echo $PATH
+else
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
 
 alias xclip="xclip -selection c"
 
@@ -96,7 +102,6 @@ eval "$(rbenv init -)"
 alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace
-ssh-add
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

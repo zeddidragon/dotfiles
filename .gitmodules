@@ -76,3 +76,9 @@
 [submodule "vimfiles/bundle/vim-gdscript"]
 	path = vimfiles/bundle/vim-gdscript
 	url = git@github.com:a-watson/vim-gdscript.git
+[submodule "submodules/pure"]
+	path = submodules/pure
+	url = git@github.com:sindresorhus/pure.git
+[submodule "submodules/purer"]
+	path = submodules/purer
+	url = git@github.com:DFurnes/purer.git

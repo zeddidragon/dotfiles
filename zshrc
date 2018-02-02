@@ -45,7 +45,7 @@ ZSH_THEME='robbyrussell'
 # Which plugins would you like to load? (plugins can be found in $HOME/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial colorize)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.tmuxinator.zsh
@@ -76,9 +76,10 @@ export NVM_DIR="$HOME/.nvm"
 if [ $IS_WSL ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
   export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
-  echo $PATH
 else
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  eval "$(rbenv init -)"
 fi
 
 alias xclip="xclip -selection c"
@@ -88,23 +89,16 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 # Allow saving with Ctrl-S in terminal vim
 vim() STTY=-ixon command vim "$@"
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # z.sh
 . "$HOME/z.sh"
 
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-
-eval "$(rbenv init -)"
 
 alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Arrow key completion
 autoload -U up-line-or-beginning-search

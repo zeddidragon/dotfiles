@@ -15,5 +15,6 @@ files = Dir.glob('*') - [__FILE__, 'keymap.c', 'vimfiles', 'z', 'submodules']
 files.each{|file| symlink file, ".#{file}"}
 symlink 'vimfiles', '.vim'
 symlink 'z/z.sh', 'z.sh'
+FileUtils.mkdir_p File.join(ENV['HOME'], '.zfunctions')
 symlink 'submodules/pure/pure.zsh', '.zfunctions/prompt_pure_setup'
 symlink 'submodules/pure/async.zsh', '.zfunctions/async'

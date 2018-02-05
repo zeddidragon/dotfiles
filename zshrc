@@ -3,13 +3,10 @@ bindkey -v
 # Source .bash_profile
 source $HOME/.bash_profile
 
-fpath+=($HOME/.zfunctions /usr/local/share/zsh-completions /usr/local/share/zsh/site-functions)
+fpath+=($HOME/.zfunctions)
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt extended_glob
-
-autoload -U promptinit; promptinit
-prompt pure
 
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -36,10 +33,17 @@ if [ $IS_WSL ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
   export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
 else
+  ZSH=$HOME/.oh-my-zsh
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  ZSH_THEME=""
+  source $ZSH/oh-my-zsh.sh
+  source ~/.tmuxinator.zsh
   eval "$(rbenv init -)"
 fi
+
+autoload -U promptinit; promptinit
+prompt pure
 
 alias xclip="xclip -selection c"
 
@@ -53,6 +57,8 @@ vim() STTY=-ixon command vim "$@"
 
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
+alias gl="git pull"
+alias gp="git push"
 alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace

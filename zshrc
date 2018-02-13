@@ -59,6 +59,8 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 alias gl="git pull"
 alias gp="git push"
+alias gc="git checkout"
+alias prod="production"
 alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace

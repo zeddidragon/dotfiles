@@ -11,3 +11,5 @@ vimfiles/.netrwhist
 mutt/.muttrc.*
 mutt/certificates
 !mutt/.muttrc.example
+mutt/aliases
+mutt/signature.htm

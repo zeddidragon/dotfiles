@@ -18,6 +18,8 @@ set imap_keepalive = 90
 set imap_check_subscribed
 set arrow_cursor
 set index_format="%4C %Z %{!%b %d} %-32.32n   %s"
+set mime_forward=yes
+set mime_forward_rest=yes
 
 alternative_order text/plain text/enriched text/html
 auto_view text/html

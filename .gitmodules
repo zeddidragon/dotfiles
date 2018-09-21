@@ -82,3 +82,9 @@
 [submodule "submodules/purer"]
 	path = submodules/purer
 	url = git@github.com:DFurnes/purer.git
+[submodule "vimfiles/bundle/VimCompletesMe"]
+	path = vimfiles/bundle/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe
+[submodule "vimfiles/bundle/dbext.vim"]
+	path = vimfiles/bundle/dbext.vim
+	url = git@github.com:vim-scripts/dbext.vim.git

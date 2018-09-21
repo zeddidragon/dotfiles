@@ -14,7 +14,8 @@ set number
 set incsearch
 set hlsearch
 set hidden
-set nowrap
+set wrap
+set linebreak
 set autoindent
 set colorcolumn=80
 set tabstop=8
@@ -75,8 +76,6 @@ command! C let @/=""
 
 " Make yank copy to clipboard
 set clipboard^=unnamed,unnamedplus
-nnoremap y "+y
-vnoremap y "+y
 " What is even an Ex mode go away
 nnoremap Q <Nop>
 

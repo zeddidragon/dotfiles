@@ -104,3 +104,5 @@ function! Move(dest)
   e a:dest
 endfunction
 command! -nargs=1 -complete=file Mv call Move(<f-args>)
+
+let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.SGO'

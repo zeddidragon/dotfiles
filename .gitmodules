@@ -88,3 +88,6 @@
 [submodule "vimfiles/bundle/dbext.vim"]
 	path = vimfiles/bundle/dbext.vim
 	url = git@github.com:vim-scripts/dbext.vim.git
+[submodule "vimfiles/bundle/hexmode"]
+	path = vimfiles/bundle/hexmode
+	url = git@github.com:fidian/hexmode.git

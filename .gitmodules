@@ -91,3 +91,9 @@
 [submodule "vimfiles/bundle/hexmode"]
 	path = vimfiles/bundle/hexmode
 	url = git@github.com:fidian/hexmode.git
+[submodule "vimfiles/bundle/vim-pug"]
+	path = vimfiles/bundle/vim-pug
+	url = git@github.com:digitaltoad/vim-pug.git
+[submodule "vim-pug"]
+	path = vim-pug
+	url = git@github.com:digitaltoad/vim-pug.git

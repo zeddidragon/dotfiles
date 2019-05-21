@@ -80,3 +80,4 @@ alias recard="killall -9 gpg-agent ; gpg --card-status"
 
 bindkey -v
 export KEYTIMEOUT=1
+bindkey "^R" history-incremental-search-backward

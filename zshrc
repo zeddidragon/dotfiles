@@ -1,5 +1,3 @@
-bindkey -v
-
 # Source .bash_profile
 source $HOME/.bash_profile
 
@@ -79,3 +77,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 export GPG_TTY=$(tty)
 alias recard="killall -9 gpg-agent ; gpg --card-status"
+
+bindkey -v
+export KEYTIMEOUT=1

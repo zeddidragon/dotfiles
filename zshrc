@@ -41,6 +41,7 @@ fi
 
 autoload -U promptinit; promptinit
 prompt pure
+PROMPT='%F{cyan}%* '$PROMPT
 
 alias xclip="xclip -selection c"
 

@@ -106,3 +106,4 @@ endfunction
 command! -nargs=1 -complete=file Mv call Move(<f-args>)
 
 let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.SGO'
+let g:javascript_sql_dialect = 'pgsql'

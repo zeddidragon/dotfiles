@@ -70,9 +70,6 @@
 [submodule "vimfiles/bundle/vim-fugitive"]
 	path = vimfiles/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vimfiles/bundle/vim-gdscript"]
-	path = vimfiles/bundle/vim-gdscript
-	url = git@github.com:a-watson/vim-gdscript.git
 [submodule "submodules/pure"]
 	path = submodules/pure
 	url = git@github.com:sindresorhus/pure.git

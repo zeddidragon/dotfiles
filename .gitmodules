@@ -103,3 +103,6 @@
 [submodule "vimfiles/bundle/bbcode"]
 	path = vimfiles/bundle/bbcode
 	url = git@github.com:vim-scripts/bbcode.git
+[submodule "vimfiles/bundle/v-vim"]
+	path = vimfiles/bundle/v-vim
+	url = git@github.com:ollykel/v-vim.git

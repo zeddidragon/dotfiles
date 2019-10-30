@@ -92,19 +92,17 @@ if executable("brew")
 else
   set rtp+=~/.fzf
 endif
-nnoremap <C-p> :FZF<CR>
+nnoremap <Space>k :FZF<CR>
 let $FZF_DEFAULT_COMMAND = 'ag -lg ""'
+nnoremap <Space>f :Ack<space>
 
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev ag Ack
 cnoreabbrev Ag Ack
 
-" Rename
-function! Move(dest)
-  !mv % a:dest
-  e a:dest
-endfunction
-command! -nargs=1 -complete=file Mv call Move(<f-args>)
-
 let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.SGO'
 let g:javascript_sql_dialect = 'pgsql'
+
+" !!Experimental craziness!!
+nnoremap vmc :e ~/.vimrc<CR>
+autocmd BufWritePost .vimrc :source %

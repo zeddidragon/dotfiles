@@ -1,6 +1,3 @@
-[submodule "vimfiles/bundle/vim-jade"]
-	path = vimfiles/bundle/vim-jade
-	url = https://github.com/digitaltoad/vim-jade
 [submodule "vimfiles/bundle/gruvbox"]
 	path = vimfiles/bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox
@@ -10,9 +7,6 @@
 [submodule "vimfiles/bundle/vim-gitgutter"]
 	path = vimfiles/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vimfiles/bundle/scss-syntax.vim"]
-	path = vimfiles/bundle/scss-syntax.vim
-	url = https://github.com/cakebaker/scss-syntax.vim
 [submodule "vimfiles/bundle/vim-stylus"]
 	path = vimfiles/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus
@@ -22,30 +16,12 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z
-[submodule "vimfiles/bundle/vim-haml"]
-	path = vimfiles/bundle/vim-haml
-	url = https://github.com/tpope/vim-haml
 [submodule "vimfiles/bundle/vim-markdown"]
 	path = vimfiles/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
-[submodule "vimfiles/bundle/vim-slim"]
-	path = vimfiles/bundle/vim-slim
-	url = https://github.com/slim-template/vim-slim
-[submodule "vimfiles/bundle/vim-es6"]
-	path = vimfiles/bundle/vim-es6
-	url = https://github.com/isRuslan/vim-es6.git
-[submodule "vimfiles/bundle/vim-jsdoc"]
-	path = vimfiles/bundle/vim-jsdoc
-	url = https://github.com/heavenshell/vim-jsdoc
 [submodule "vimfiles/bundle/vim-javascript"]
 	path = vimfiles/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vimfiles/bundle/swift.vim"]
-	path = vimfiles/bundle/swift.vim
-	url = https://github.com/keith/swift.vim.git
-[submodule "vimfiles/bundle/vim-css-color"]
-	path = vimfiles/bundle/vim-css-color
-	url = https://github.com/skammer/vim-css-color
 [submodule "vimfiles/bundle/elm-vim"]
 	path = vimfiles/bundle/elm-vim
 	url = https://github.com/ElmCast/elm-vim
@@ -61,12 +37,6 @@
 [submodule "vimfiles/bundle/ack.vim"]
 	path = vimfiles/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "vimfiles/bundle/neomake-local-eslint.vim"]
-	path = vimfiles/bundle/neomake-local-eslint.vim
-	url = https://github.com/benjie/neomake-local-eslint.vim.git
-[submodule "vimfiles/bundle/neomake"]
-        path = vimfiles/bundle/neomake
-        url = https://github.com/neomake/neomake.git
 [submodule "vimfiles/bundle/vim-fugitive"]
 	path = vimfiles/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git

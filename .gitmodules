@@ -76,3 +76,6 @@
 [submodule "vimfiles/bundle/v-vim"]
 	path = vimfiles/bundle/v-vim
 	url = git@github.com:ollykel/v-vim.git
+[submodule "vimfiles/bundle/ale"]
+	path = vimfiles/bundle/ale
+	url = git@github.com:dense-analysis/ale.git

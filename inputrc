@@ -1,2 +1,4 @@
 set editing-mode vi
 set keymap vi-command
+set -o vi
+set editing-mode vi

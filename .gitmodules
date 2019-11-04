@@ -79,3 +79,6 @@
 [submodule "vimfiles/bundle/ale"]
 	path = vimfiles/bundle/ale
 	url = git@github.com:dense-analysis/ale.git
+[submodule "vimfiles/bundle/vim-vinegar"]
+	path = vimfiles/bundle/vim-vinegar
+	url = git@github.com:tpope/vim-vinegar.git

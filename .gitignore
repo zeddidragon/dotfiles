@@ -13,3 +13,8 @@ mutt/certificates
 !mutt/.muttrc.example
 mutt/aliases
 mutt/signature.htm
+vimfiles/.VimballRecord
+vimfiles/autoload/netrw*.vim
+vimfiles/doc/
+vimfiles/plugin/
+vimfiles/syntax/netrw.vim

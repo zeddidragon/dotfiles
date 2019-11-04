@@ -59,7 +59,7 @@ alias gl="git pull"
 alias gp="git push"
 alias gc="git checkout"
 alias gm="git merge"
-alias prod="production"
+alias gcp="git cherry-pick"
 alias glhf="git pull --rebase && git push"
 
 export HISTCONTROL=ignorespace

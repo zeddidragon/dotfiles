@@ -84,9 +84,6 @@ autocmd StdinReadPre * let s:std_in=1
 
 . "$HOME/z.sh"
 
-autocmd! BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-
 if executable("brew")
   set rtp+=/usr/local/opt/fzf
 else

@@ -28,7 +28,7 @@ for path in ./*; do
 done
 
 link ./vimfiles .vim
-link ./z/z.sh .z.sh
+link ./z/z.sh z.sh
 mkdir -p "$HOME/.zfunctions"
 link ./submodules/pure/pure.zsh .zfunctions/prompt_pure_setup
 link ./submodules/pure/async.zsh .zfunctions/async

@@ -11,11 +11,31 @@ ignore_submodules=1
 ignore_bootstrap=1
 ignore_cache=1
 
+canonicalize_path() {
+    if [ -d "$1" ]; then
+        _canonicalize_dir_path "$1"
+    else
+        _canonicalize_file_path "$1"
+    fi
+}
+
+_canonicalize_dir_path() {
+    (cd "$1" 2>/dev/null && pwd -P)
+}
+
+_canonicalize_file_path() {
+    local dir file
+    dir=$(dirname -- "$1")
+    file=$(basename -- "$1")
+    (cd "$dir" 2>/dev/null && printf '%s/%s\n' "$(pwd -P)" "$file")
+}
+
 link() {
-  path=$(readlink -f $1)
+  path=$(canonicalize_path $1)
   target=$2
   as="$HOME/$target"
-  rm $as
+  rm $as 2> /dev/null
+  echo "$path -> $as"
   ln -s $path $as
 }
 

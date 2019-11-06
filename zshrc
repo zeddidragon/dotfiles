@@ -6,44 +6,35 @@ fpath+=($HOME/.zfunctions)
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt extended_glob
 
-export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
+if hash rbenv 2>/dev/null
+then
+  export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export EDITOR='vim'
 
-# ssh
-# export SSH_KEY_PATH="$HOME/.ssh/dsa_id"
-
-alias bex='bundle exec '
 alias clip='xclip -i -selection clipboard'
-alias tm='tmux -2'
 
+if hash nvm 2>/dev/null
+then
 export NVM_DIR="$HOME/.nvm"
-if [ $IS_WSL ]; then
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
-  export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
-else
-  ZSH=$HOME/.oh-my-zsh
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-  ZSH_THEME=""
-  source $ZSH/oh-my-zsh.sh
+  if [ $IS_WSL ]; then
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
+    export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
+  else
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  fi
+fi
+
+if hash tmuxinator 2>/dev/null
+then
   source ~/.tmuxinator.zsh
-  eval "$(rbenv init -)"
 fi
 
 autoload -U promptinit; promptinit
 prompt pure
 PROMPT='%F{cyan}%* '$PROMPT
-
-alias xclip="xclip -selection c"
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
@@ -75,9 +66,13 @@ bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-export GPG_TTY=$(tty)
-alias recard="killall -9 gpg-agent ; gpg --card-status"
+
+if hash gpgconf 2>/dev/null
+then
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  export GPG_TTY=$(tty)
+  alias recard="killall -9 gpg-agent ; gpg --card-status"
+fi
 
 bindkey -v
 export KEYTIMEOUT=1

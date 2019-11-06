@@ -12,8 +12,7 @@ ignore_bootstrap=1
 ignore_cache=1
 
 link() {
-  path=$1
-  file="${path##*/}"
+  path=$(readlink -f $1)
   target=$2
   as="$HOME/$target"
   rm $as

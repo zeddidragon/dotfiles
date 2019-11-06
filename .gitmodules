@@ -58,9 +58,6 @@
 [submodule "vimfiles/bundle/vim-pug"]
 	path = vimfiles/bundle/vim-pug
 	url = git@github.com:digitaltoad/vim-pug.git
-[submodule "vim-pug"]
-	path = vim-pug
-	url = git@github.com:digitaltoad/vim-pug.git
 [submodule "vimfiles/bundle/markdown-preview.nvim"]
 	path = vimfiles/bundle/markdown-preview.nvim
 	url = git@github.com:iamcco/markdown-preview.nvim.git

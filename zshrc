@@ -46,10 +46,6 @@ alias gm="git merge"
 alias gcp="git cherry-pick"
 alias glhf="git pull --rebase && git push"
 
-export SAVEHIST=16384
-export HISTFILE="$HOME/.zsh_history"
-export HISTCONTROL=ignorespace
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Arrow key completion
@@ -70,4 +66,7 @@ fi
 
 bindkey -v
 export KEYTIMEOUT=1
-bindkey -M isearch "^R" history-incremental-search-backward
+export SAVEHIST=16384
+export HISTFILE="$HOME/.zsh_history"
+export HISTCONTROL=ignorespace
+bindkey "^R" history-incremental-pattern-search-backward

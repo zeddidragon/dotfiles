@@ -102,4 +102,4 @@ let g:javascript_sql_dialect = 'pgsql'
 
 " !!Experimental craziness!!
 nnoremap vmc :e ~/.vimrc<CR>
-nmap <space>r :!tmux send-keys -t .+ q Up Enter<CR><CR>
+nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>

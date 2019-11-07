@@ -17,6 +17,8 @@ _tmuxinator() {
   return
 }
 
+autoload -Uz compinit
+compinit
 compdef _tmuxinator tmuxinator mux
 alias mux="tmuxinator"
 

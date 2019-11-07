@@ -6,19 +6,13 @@ fpath+=($HOME/.zfunctions)
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt extended_glob
 
-if hash rbenv 2>/dev/null
-then
-  export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
 export EDITOR='vim'
 
 alias clip='xclip -i -selection clipboard'
 
-if hash nvm 2>/dev/null
-then
-export NVM_DIR="$HOME/.nvm"
+nvm_dir="$HOME/.nvm"
+if [ -d "$nvm_dir" ]; then
+export NVM_DIR="$nvm_dir"
   if [ $IS_WSL ]; then
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
     export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
@@ -27,8 +21,7 @@ export NVM_DIR="$HOME/.nvm"
   fi
 fi
 
-if hash tmuxinator 2>/dev/null
-then
+if hash tmuxinator 2>/dev/null; then
   source ~/.tmuxinator.zsh
 fi
 
@@ -67,8 +60,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-if hash gpgconf 2>/dev/null
-then
+if hash gpgconf 2>/dev/null; then
   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   export GPG_TTY=$(tty)
   alias recard="killall -9 gpg-agent ; gpg --card-status"

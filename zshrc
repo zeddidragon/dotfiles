@@ -1,7 +1,7 @@
 # Source .bash_profile
 source $HOME/.bash_profile
-
 fpath+=($HOME/.zfunctions)
+
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt extended_glob
@@ -67,6 +67,9 @@ fi
 bindkey -v
 export KEYTIMEOUT=1
 export SAVEHIST=16384
+export HISTSIZE=16384
 export HISTFILE="$HOME/.zsh_history"
 export HISTCONTROL=ignorespace
 bindkey "^R" history-incremental-pattern-search-backward
+
+export PATH="$HOME/bin:$PATH"

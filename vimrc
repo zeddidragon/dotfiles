@@ -37,7 +37,7 @@ set laststatus=2  " Show statusbar even when not split
 set backupcopy=yes
 set ignorecase
 set smartcase
-set mouse=a " just to make it easier on colleagues
+set mouse=a
 
 set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
@@ -62,7 +62,7 @@ vnoremap å za
 nnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
 vnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
 
-" Tab to autocomplete paths
+" Ctrl+space to autocomplete paths
 imap <C-space> <C-x><C-f>
 set path +=**
 
@@ -74,11 +74,10 @@ map <C-l> <C-w>l
 
 " Clear search command
 command! C let @/=""
+nmap <space>c :C<CR>
 
-" Make yank copy to clipboard
-set clipboard^=unnamed,unnamedplus
-" What is even an Ex mode go away
-nnoremap Q <Nop>
+" Yank unnamed register to clipboards
+nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
 
 autocmd StdinReadPre * let s:std_in=1
 
@@ -103,3 +102,5 @@ let g:javascript_sql_dialect = 'pgsql'
 " !!Experimental craziness!!
 nnoremap vmc :e ~/.vimrc<CR>
 nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>
+nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
+nmap <space>p :let @"=@+<CR>p

@@ -74,7 +74,7 @@ map <C-l> <C-w>l
 
 " Clear search command
 command! C let @/=""
-nmap <space>c :C<CR>
+nmap <space>c :C<CR>:e!<CR>
 
 " Yank unnamed register to clipboards
 nmap <space>y :let @+=@"<CR>:let @*=@"<CR>

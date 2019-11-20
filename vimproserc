@@ -1,0 +1,92 @@
+execute pathogen#infect()
+
+" Enable defaults that really should've been enabled in the first place
+syntax on
+colorscheme two-firewatch
+" Let me keep my transparent background
+set t_Co=256
+set backspace=2
+
+set incsearch
+set hlsearch
+set hidden
+set wrap
+set linebreak
+set autoindent
+set colorcolumn=80
+set tabstop=8
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set showmatch
+set history=1000
+set undolevels=1000
+set title
+set visualbell
+set noerrorbells
+set nobackup
+set noswapfile
+set nofoldenable
+set splitbelow
+set splitright
+set backupcopy=yes
+set ignorecase
+set smartcase
+set mouse=a
+
+nmap j gj
+nmap k gk
+
+set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
+
+" Bind to save 
+nnoremap <C-s> :w<cr>
+inoremap <C-s> <esc>:w<cr>a
+vnoremap <C-s> <esc>:w<cr>v
+map <Esc><Esc> :w<CR>
+
+" Bind to find + ræplace
+nnoremap æ :%s ///g<C-left><right>
+vnoremap æ :s ///g<C-left><right>
+
+" Easy window navigation
+map <C-h> <C-w>h<C-w>_
+map <C-j> <C-w>j<C-w>_
+map <C-k> <C-w>k<C-w>_
+map <C-l> <C-w>l<C-w>_
+
+" Clear search command
+command! C let @/=""
+nmap <space>c :C<CR>:e!<CR>
+
+" Yank unnamed register to clipboards
+nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
+
+autocmd StdinReadPre * let s:std_in=1
+
+if executable("brew")
+  set rtp+=/usr/local/opt/fzf
+else
+  set rtp+=~/.fzf
+endif
+nnoremap <Space>k :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -lg ""'
+nnoremap <Space>f :Ack<space>
+
+let g:ackprg = 'ag --vimgrep --smart-case'
+let g:ack_qhandler = "copen 50"
+let g:ack_lhandler = "lopen 50"
+cnoreabbrev ag Ack
+cnoreabbrev Ag Ack
+
+" !!Experimental craziness!!
+nnoremap vmc :e ~/.vimrc<CR>
+nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>
+nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
+nmap <space>p :let @"=@+<CR>p
+
+set spell noci nosi noai nolist noshowmode noshowcmd
+set complete+=s
+call goyo#execute(0, [])
+call gitgutter#disable()
+

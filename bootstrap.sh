@@ -11,6 +11,7 @@ ignore_submodules=1
 ignore_bootstrap=1
 ignore_cache=1
 ignore_vimplugs=1
+ignore_prim=1
 
 canonicalize_path() {
     if [ -d "$1" ]; then
@@ -49,5 +50,4 @@ for path in ./*; do
 done
 
 link ./vimfiles .vim
-link ./z/z.sh z.sh
-mkdir -p "$HOME/.zfunctions"
+mkdir -p "$HOME/bin"

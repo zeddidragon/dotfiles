@@ -10,6 +10,7 @@ ignore_z=1
 ignore_submodules=1
 ignore_bootstrap=1
 ignore_cache=1
+ignore_vimplugs=1
 
 canonicalize_path() {
     if [ -d "$1" ]; then
@@ -50,5 +51,3 @@ done
 link ./vimfiles .vim
 link ./z/z.sh z.sh
 mkdir -p "$HOME/.zfunctions"
-link ./submodules/pure/pure.zsh .zfunctions/prompt_pure_setup
-link ./submodules/pure/async.zsh .zfunctions/async

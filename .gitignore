@@ -7,14 +7,15 @@ custom
 *.swp
 !custom/example.zshcache
 cache/
-vimfiles/.netrwhist
 mutt/.muttrc.*
 mutt/certificates
 !mutt/.muttrc.example
 mutt/aliases
 mutt/signature.htm
+vimfiles/.netrwhist
 vimfiles/.VimballRecord
 vimfiles/autoload/netrw*.vim
 vimfiles/doc/
 vimfiles/plugin/
 vimfiles/syntax/netrw.vim
+vimfiles/bundle

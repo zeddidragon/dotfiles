@@ -67,9 +67,16 @@ fi
 bindkey -v
 export KEYTIMEOUT=1
 export SAVEHIST=16384
-export HISTSIZE=16384
+export HISTSIZE=65536
 export HISTFILE="$HOME/.zsh_history"
 export HISTCONTROL=ignorespace
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
 bindkey "^R" history-incremental-pattern-search-backward
 
 export PATH="$HOME/bin:$PATH"

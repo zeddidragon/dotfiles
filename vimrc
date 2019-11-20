@@ -100,6 +100,8 @@ let $FZF_DEFAULT_COMMAND = 'ag -lg ""'
 nnoremap <Space>f :Ack<space>
 
 let g:ackprg = 'ag --vimgrep --smart-case'
+let g:ack_qhandler = "copen 50"
+let g:ack_lhandler = "lopen 50"
 cnoreabbrev ag Ack
 cnoreabbrev Ag Ack
 

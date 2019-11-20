@@ -79,3 +79,6 @@
 [submodule "vimfiles/bundle/vim-vinegar"]
 	path = vimfiles/bundle/vim-vinegar
 	url = git@github.com:tpope/vim-vinegar.git
+[submodule "vimfiles/bundle/vim-abolish"]
+	path = vimfiles/bundle/vim-abolish
+	url = git@github.com:tpope/vim-abolish.git

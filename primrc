@@ -1,8 +1,7 @@
 execute pathogen#infect()
 
-" Enable defaults that really should've been enabled in the first place
 syntax on
-colorscheme two-firewatch
+colorscheme gruvbox
 " Let me keep my transparent background
 set t_Co=256
 set backspace=2
@@ -34,10 +33,12 @@ set ignorecase
 set smartcase
 set mouse=a
 
+set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
+
 nmap j gj
 nmap k gk
-
-set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
+nmap 0 g0
+nmap $ g$
 
 " Bind to save 
 nnoremap <C-s> :w<cr>
@@ -50,10 +51,10 @@ nnoremap æ :%s ///g<C-left><right>
 vnoremap æ :s ///g<C-left><right>
 
 " Easy window navigation
-map <C-h> <C-w>h<C-w>_
-map <C-j> <C-w>j<C-w>_
-map <C-k> <C-w>k<C-w>_
-map <C-l> <C-w>l<C-w>_
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Clear search command
 command! C let @/=""
@@ -80,13 +81,21 @@ cnoreabbrev ag Ack
 cnoreabbrev Ag Ack
 
 " !!Experimental craziness!!
-nnoremap vmc :e ~/.vimrc<CR>
+nnoremap vmc :e ~/.primrc<CR>
 nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>
 nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
 nmap <space>p :let @"=@+<CR>p
 
 set spell noci nosi noai nolist noshowmode noshowcmd
 set complete+=s
-call goyo#execute(0, [])
 call gitgutter#disable()
+au BufRead,BufNewFile primrc,.primrc setfiletype vim
 
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_conceal_ctermfg = 240
+
+
+command! -nargs=? -bar -bang -range Limelight <line1>,<line2>call limelight#execute(<bang>0, <count> > 0, <f-args>)
+
+call goyo#execute(0, 0)

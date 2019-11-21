@@ -11,31 +11,30 @@ repos=(
   wavded/vim-stylus
   tikhomirov/vim-glsl
   plasticboy/vim-markdown
-  pangloss/vim-javascript.git
+  pangloss/vim-javascript
   ElmCast/elm-vim
-  cespare/vim-toml.git
-  elixir-lang/vim-elixir.git
-  rust-lang/rust.vim.git
-  mileszs/ack.vim.git
-  tpope/vim-fugitive.git
-  sindresorhus/pure.git
-  DFurnes/purer.git
+  cespare/vim-toml
+  elixir-lang/vim-elixir
+  rust-lang/rust.vim
+  mileszs/ack.vim
+  tpope/vim-fugitive
+  sindresorhus/pure
+  DFurnes/purer
   ajh17/VimCompletesMe
-  vim-scripts/dbext.vim.git
-  fidian/hexmode.git
-  digitaltoad/vim-pug.git
-  iamcco/markdown-preview.nvim.git
-  statico/vim-javascript-sql.git
-  lifepillar/pgsql.vim.git
-  vim-scripts/bbcode.git
-  ollykel/v-vim.git
-  dense-analysis/ale.git
-  tpope/vim-vinegar.git
-  tpope/vim-abolish.git
+  vim-scripts/dbext.vim
+  fidian/hexmode
+  digitaltoad/vim-pug
+  iamcco/markdown-preview.nvim
+  statico/vim-javascript-sql
+  lifepillar/pgsql.vim
+  vim-scripts/bbcode
+  ollykel/v-vim
+  dense-analysis/ale
+  tpope/vim-vinegar
+  tpope/vim-abolish
   junegunn/goyo.vim
-  justinmk/vim-sneak
-  rakr/vim-two-firewatch
-  zefei/cake16
+  goldfeld/vim-seek
+  junegunn/limelight.vim
 )
 
 set -e

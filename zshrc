@@ -45,7 +45,7 @@ alias gc="git checkout"
 alias gm="git merge"
 alias gcp="git cherry-pick"
 alias glhf="git pull --rebase && git push"
-alias prim="vim -Nu ~/.vimproserc"
+alias prim="vim -Nu ~/.primrc"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

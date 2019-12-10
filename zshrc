@@ -37,7 +37,7 @@ vim() STTY=-ixon command vim "$@"
 # z.sh
 . "$HOME/z.sh"
 
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+alias fuck='eval $(thefuck $(fc -ln | tail -n 1)); fc -R'
 
 alias gl="git pull"
 alias gp="git push"

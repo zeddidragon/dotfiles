@@ -12,11 +12,6 @@ set ruler
 set backspace=2
 set number
 set relativenumber
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained * set relativenumber
-  autocmd BufLeave,FocusLost * set norelativenumber
-augroup END
 
 set incsearch
 set hlsearch

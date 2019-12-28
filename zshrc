@@ -5,6 +5,10 @@ fpath+=($HOME/.zfunctions)
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt extended_glob
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
 
 export EDITOR='vim'
 
@@ -46,6 +50,7 @@ alias gm="git merge"
 alias gcp="git cherry-pick"
 alias glhf="git pull --rebase && git push"
 alias prim="vim -Nu ~/.primrc"
+alias icat="kitty +kitten icat"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -35,6 +35,7 @@ repos=(
   junegunn/goyo.vim
   goldfeld/vim-seek
   junegunn/limelight.vim
+  zah/nim.vim
 )
 
 set -e

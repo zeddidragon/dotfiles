@@ -1,6 +1,8 @@
 # Source .bash_profile
 source $HOME/.bash_profile
 fpath+=($HOME/.zfunctions)
+fpath+=('/home/tony/.nvm/versions/node/v13.7.0/lib/node_modules/pure-prompt/functions')
+PROMPT='%F{cyan}%* '$PROMPT
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -8,11 +10,14 @@ setopt extended_glob
 autoload -Uz compinit
 compinit
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+# kitty + complete setup zsh | source /dev/stdin
 
 export EDITOR='vim'
 
 alias clip='xclip -i -selection clipboard'
+
+autoload -U promptinit; promptinit
+prompt pure
 
 nvm_dir="$HOME/.nvm"
 if [ -d "$nvm_dir" ]; then
@@ -28,10 +33,6 @@ fi
 if hash tmuxinator 2>/dev/null; then
   source ~/.tmuxinator.zsh
 fi
-
-autoload -U promptinit; promptinit
-prompt pure
-PROMPT='%F{cyan}%* '$PROMPT
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 

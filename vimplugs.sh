@@ -36,23 +36,16 @@ repos=(
   goldfeld/vim-seek
   junegunn/limelight.vim
   zah/nim.vim
+  sgur/vim-editorconfig
 )
 
 set -e
 dir=vimfiles/bundle
 
 if [ -d "$dir" -a -z "$1" ]; then
-  if which trash &>/dev/null; then
-    echo "▲ Moving old bundle dir to trash"
-    trash "$dir"
-  elif which gio &>/dev/null; then
-    echo "▲ Moving old bundle dir to trash"
-    gio trash "$dir"
-  else
-    temp="$(mktemp -d)"
-    echo "▲ Moving old bundle dir to $temp"
-    mv "$dir" "$temp"
-  fi
+  temp="$(mktemp -d)"
+  echo "▲ Moving old bundle dir to $temp"
+  mv "$dir" "$temp"
 fi
 
 mkdir -p "$dir"

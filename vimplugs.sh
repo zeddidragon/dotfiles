@@ -37,6 +37,7 @@ repos=(
   junegunn/limelight.vim
   zah/nim.vim
   sgur/vim-editorconfig
+  calviken/vim-gdscript3
 )
 
 set -e

@@ -20,7 +20,9 @@ set wrap
 set linebreak
 set autoindent
 set colorcolumn=80
-set tabstop=8
+set tabstop=4
+set list
+set listchars=tab:>-
 set shiftwidth=2
 set softtabstop=2
 set expandtab
@@ -106,3 +108,10 @@ nnoremap vmc :e ~/.vimrc<CR>
 nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>
 nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
 nmap <space>p :let @"=@+<CR>p
+
+" override tab settings on a per-directory basis
+function! SetStandardTabs()
+  set noexpandtab
+  set tabstop=4
+  set softtabstop=0
+endfunction

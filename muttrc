@@ -1,8 +1,6 @@
 set ssl_starttls=yes
 set ssl_force_tls=yes
 
-set alias_file=~/.mutt/aliases
-source $alias_file
 set realname="Tony A. Sæle"
 set folder=~/.mail
 set spoolfile=+inbox

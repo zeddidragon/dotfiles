@@ -132,3 +132,4 @@ export NVM_DIR="/home/tony/.nvm"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/bin:$PATH"

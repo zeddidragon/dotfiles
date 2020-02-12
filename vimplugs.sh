@@ -38,6 +38,7 @@ repos=(
   zah/nim.vim
   sgur/vim-editorconfig
   calviken/vim-gdscript3
+  martinda/Jenkinsfile-vim-syntax
 )
 
 set -e

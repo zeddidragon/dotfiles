@@ -80,8 +80,7 @@ map <C-l> <C-w>l
 command! C let @/=""
 nmap <space>c :C<CR>:e!<CR>
 
-" Yank unnamed register to clipboards
-nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
+set clipboard^=unnamed,unnamedplus
 
 autocmd StdinReadPre * let s:std_in=1
 

@@ -35,7 +35,6 @@ repos=(
   junegunn/goyo.vim
   goldfeld/vim-seek
   junegunn/limelight.vim
-  zah/nim.vim
   sgur/vim-editorconfig
   calviken/vim-gdscript3
   martinda/Jenkinsfile-vim-syntax

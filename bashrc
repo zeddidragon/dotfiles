@@ -133,3 +133,4 @@ export NVM_DIR="/home/tony/.nvm"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+alias more=less

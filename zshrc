@@ -12,7 +12,8 @@ compinit
 # Completion for kitty
 # kitty + complete setup zsh | source /dev/stdin
 
-export EDITOR=vim
+export VISUAL=vim
+export EDITOR=$VISUAL
 export PAGER=less
 
 alias clip='xclip -i -selection clipboard'

@@ -1,2 +1,5 @@
+set bell-style none
 set editing-mode vi
 set keymap vi-command
+set colored-stats On
+set show-all-if-ambiguous On

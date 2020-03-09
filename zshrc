@@ -1,5 +1,5 @@
-# Source .bash_profile
-source $HOME/.bash_profile
+[[ -f ~/.bash_profile ]] && . ~/.bash_profile
+
 fpath+=($HOME/.zfunctions)
 fpath+=('/home/tony/.nvm/versions/node/v13.7.0/lib/node_modules/pure-prompt/functions')
 PROMPT='%F{cyan}%* '$PROMPT
@@ -20,17 +20,6 @@ alias clip='xclip -i -selection clipboard'
 
 autoload -U promptinit; promptinit
 prompt pure
-
-nvm_dir="$HOME/.nvm"
-if [ -d "$nvm_dir" ]; then
-export NVM_DIR="$nvm_dir"
-  if [ $IS_WSL ]; then
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm faster
-    export PATH="$PATH:$NVM_DIR/versions/node/v9.2.1/bin/"
-  else
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-  fi
-fi
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 

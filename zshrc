@@ -54,32 +54,34 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-if hash gpgconf 2>/dev/null; then
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  export GPG_TTY=$(tty)
-  alias recard="killall -9 gpg-agent ; gpg --card-status"
-fi
+if [[ "$SSH_TTY" = "" ]]; then
+  if hash gpgconf 2>/dev/null; then
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    export GPG_TTY=$(tty)
+    alias recard="killall -9 gpg-agent ; gpg --card-status"
+  fi
 
-SSH_ENV=$HOME/.ssh/environment
+  SSH_ENV=$HOME/.ssh/environment
 
-# start the ssh-agent
-function start_agent {
-    echo "Initializing new SSH agent..."
-    # spawn ssh-agent
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
-    echo succeeded
-    chmod 600 ${SSH_ENV}
-    . ${SSH_ENV} > /dev/null
-    /usr/bin/ssh-add
-}
+  # start the ssh-agent
+  function start_agent {
+      echo "Initializing new SSH agent..."
+      # spawn ssh-agent
+      /usr/bin/ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
+      echo succeeded
+      chmod 600 ${SSH_ENV}
+      . ${SSH_ENV} > /dev/null
+      /usr/bin/ssh-add
+  }
 
-if [ -f "${SSH_ENV}" ]; then
-     . ${SSH_ENV} > /dev/null
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
-    }
-else
-    start_agent;
+  if [ -f "${SSH_ENV}" ]; then
+       . ${SSH_ENV} > /dev/null
+       ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+          start_agent;
+      }
+  else
+      start_agent;
+  fi
 fi
 
 bindkey -v

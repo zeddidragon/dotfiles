@@ -1,6 +1,7 @@
 [[ -f ~/.bash_profile ]] && . ~/.bash_profile
 
 fpath+=($HOME/.zfunctions)
+fpath+=($HOME/.zsh/pure)
 PROMPT='%F{cyan}%* '$PROMPT
 
 # Case insensitive completion

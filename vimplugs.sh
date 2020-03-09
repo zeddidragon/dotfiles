@@ -38,6 +38,7 @@ repos=(
   sgur/vim-editorconfig
   calviken/vim-gdscript3
   martinda/Jenkinsfile-vim-syntax
+  junegunn/fzf
 )
 
 set -e

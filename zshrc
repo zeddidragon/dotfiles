@@ -1,7 +1,6 @@
 [[ -f ~/.bash_profile ]] && . ~/.bash_profile
 
 fpath+=($HOME/.zfunctions)
-fpath+=('/home/tony/.nvm/versions/node/v13.7.0/lib/node_modules/pure-prompt/functions')
 PROMPT='%F{cyan}%* '$PROMPT
 
 # Case insensitive completion

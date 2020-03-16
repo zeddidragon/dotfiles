@@ -39,6 +39,7 @@ repos=(
   calviken/vim-gdscript3
   martinda/Jenkinsfile-vim-syntax
   junegunn/fzf
+  tmux-plugins/vim-tmux-focus-events
 )
 
 set -e

@@ -122,9 +122,6 @@ fi
 # fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-. /etc/profile.d/vte.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

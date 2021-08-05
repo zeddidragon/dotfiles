@@ -26,7 +26,6 @@ repos=(
   digitaltoad/vim-pug
   iamcco/markdown-preview.nvim
   statico/vim-javascript-sql
-  lifepillar/pgsql.vim
   vim-scripts/bbcode
   ollykel/v-vim
   dense-analysis/ale

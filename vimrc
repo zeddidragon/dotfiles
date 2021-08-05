@@ -2,6 +2,7 @@ execute pathogen#infect()
 
 " Enable defaults that really should've been enabled in the first place
 syntax on
+filetype plugin on
 filetype plugin indent on
 colorscheme gruvbox
 " Let me keep my transparent background
@@ -42,6 +43,7 @@ set backupcopy=yes
 set ignorecase
 set smartcase
 set mouse=a
+set nocompatible  " Disable backwards compatibility with Vi
 
 set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
@@ -100,7 +102,6 @@ cnoreabbrev ag Ack
 cnoreabbrev Ag Ack
 
 let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.SGO'
-let g:javascript_sql_dialect = 'pgsql'
 
 " !!Experimental craziness!!
 nnoremap vmc :e ~/.vimrc<CR>

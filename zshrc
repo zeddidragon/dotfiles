@@ -9,8 +9,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 setopt extended_glob
 autoload -Uz compinit
 compinit
-# Completion for kitty
-# kitty + complete setup zsh | source /dev/stdin
 
 export VISUAL=vim
 export EDITOR=$VISUAL

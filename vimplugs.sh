@@ -39,6 +39,7 @@ repos=(
   martinda/Jenkinsfile-vim-syntax
   junegunn/fzf
   tmux-plugins/vim-tmux-focus-events
+  ziglang/zig.vim
 )
 
 set -e

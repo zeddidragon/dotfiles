@@ -116,3 +116,5 @@ function! SetStandardTabs()
   set softtabstop=0
   set shiftwidth=4
 endfunction
+
+set nofixendofline

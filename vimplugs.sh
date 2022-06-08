@@ -18,8 +18,6 @@ repos=(
   rust-lang/rust.vim
   mileszs/ack.vim
   tpope/vim-fugitive
-  sindresorhus/pure
-  DFurnes/purer
   ajh17/VimCompletesMe
   vim-scripts/dbext.vim
   fidian/hexmode
@@ -30,7 +28,6 @@ repos=(
   ollykel/v-vim
   dense-analysis/ale
   tpope/vim-vinegar
-  tpope/vim-abolish
   junegunn/goyo.vim
   goldfeld/vim-seek
   junegunn/limelight.vim

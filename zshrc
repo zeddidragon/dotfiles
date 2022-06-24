@@ -1,5 +1,8 @@
 [[ -f ~/.bash_profile ]] && . ~/.bash_profile
 
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+
 fpath+=($HOME/.zfunctions)
 fpath+=($HOME/.zsh/pure)
 PROMPT='%F{cyan}%* '$PROMPT
@@ -16,7 +19,7 @@ export PAGER=less
 
 alias clip='xclip -i -selection clipboard'
 
-autoload -U promptinit; promptinit
+autoload -Uz promptinit; promptinit
 prompt pure
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

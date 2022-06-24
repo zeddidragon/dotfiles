@@ -77,6 +77,10 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+tmap <C-h> <C-w>h
+tmap <C-j> <C-w>j
+tmap <C-k> <C-w>k
+tmap <C-l> <C-w>l
 
 " Clear search command
 command! C let @/=""
@@ -109,6 +113,7 @@ nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>
 nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
 nmap <space>p :let @"=@+<CR>p
 
+
 " override tab settings on a per-directory basis
 function! SetStandardTabs()
   set noexpandtab
@@ -118,3 +123,6 @@ function! SetStandardTabs()
 endfunction
 
 set nofixendofline
+
+" vim-powered terminal in split window
+map <Leader>t :term ++close<cr>

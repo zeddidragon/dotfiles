@@ -99,3 +99,5 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 bindkey "^R" history-incremental-pattern-search-backward
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions

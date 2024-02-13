@@ -44,6 +44,7 @@ set ignorecase
 set smartcase
 set mouse=a
 set nocompatible  " Disable backwards compatibility with Vi
+set formatoptions-=t  " Disable insertion of newlines
 
 set wildignore+=*/node_modules/*,*/__pycachce__/*,*.pyc,*.swp,*.bak,*.class
 
@@ -98,7 +99,7 @@ else
   set rtp+=~/.fzf
 endif
 nnoremap <Space>k :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'ag -lg ""'
+let $FZF_DEFAULT_COMMAND = 'ag -Ulg ""'
 nnoremap <Space>f :Ack<space>
 
 let g:ackprg = 'ag --vimgrep --smart-case'
@@ -106,6 +107,7 @@ cnoreabbrev ag Ack
 cnoreabbrev Ag Ack
 
 let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.SGO'
+let g:ale_echo_msg_format = '%linter% says %s'
 
 " !!Experimental craziness!!
 nnoremap vmc :e ~/.vimrc<CR>

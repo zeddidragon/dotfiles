@@ -50,3 +50,8 @@ done
 
 link ./vimfiles .vim
 mkdir -p "$HOME/bin"
+
+for path in ./bin/*; do
+  file="${path##*/}"
+  link $path "bin/$file"
+done

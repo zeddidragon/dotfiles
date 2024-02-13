@@ -18,7 +18,7 @@ repos=(
   rust-lang/rust.vim
   mileszs/ack.vim
   tpope/vim-fugitive
-  ajh17/VimCompletesMe
+  vim-scripts/VimCompletesMe
   vim-scripts/dbext.vim
   fidian/hexmode
   digitaltoad/vim-pug
@@ -32,11 +32,15 @@ repos=(
   goldfeld/vim-seek
   junegunn/limelight.vim
   sgur/vim-editorconfig
-  calviken/vim-gdscript3
   martinda/Jenkinsfile-vim-syntax
   junegunn/fzf
   tmux-plugins/vim-tmux-focus-events
   ziglang/zig.vim
+  radgeRayden/vim-scopes
+  leafgarland/typescript-vim
+  othree/html5.vim
+  evanleck/vim-svelte
+  neoclide/coc.nvim
 )
 
 set -e
@@ -59,10 +63,10 @@ for repo in ${repos[@]}; do
   plugin="$(basename $repo | sed -e 's/\.git$//')"
   dest="$dir/$plugin"
   rm -rf "$dest"
+  echo "· Cloning $repo"
   (
     git clone --depth=1 -q "https://github.com/$repo" "$dest"
     rm -rf "$dest/.git"
-    echo "· Cloned $repo"
     [ "$plugin" = "onehalf" ] && (mv "$dest" "$dest.TEMP" && mv "$dest.TEMP/vim" "$dest" && rm -rf "$dest.TEMP")
   ) &
 done

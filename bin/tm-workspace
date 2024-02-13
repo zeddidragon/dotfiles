@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+extra_command=$1
+
+echo "Extra command: $extra_command"
+create_pane () {
+  tmux send-keys "cd /home/zeddy/git/$1" "C-m"
+  tmux rename-window "$2"
+  if  [ -n "$extra_command" ]; then
+    echo "Yes extra"
+    tmux send-keys "$extra_command" "C-m"
+  fi
+  tmux new-window
+}
+
+cd /home/zeddy/git/
+tmux new-session -d
+create_pane game-server "GS Prod"
+create_pane gs1 "GS QA"
+create_pane gs2 "GS Stg"
+create_pane MonkeyBits "MBt"
+create_pane scoutgg-clients/sgg-services "sggs"
+create_pane sportyman "sporty"
+tmux -2 attach-session

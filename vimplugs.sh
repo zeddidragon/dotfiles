@@ -41,6 +41,8 @@ repos=(
   othree/html5.vim
   evanleck/vim-svelte
   neoclide/coc.nvim
+  kenn7/vim-arsync
+  habamax/vim-godot 
 )
 
 set -e
@@ -55,6 +57,7 @@ fi
 mkdir -p "$dir"
 
 for repo in ${repos[@]}; do
+  echo "Cloning $repo"
   if [ -n "$1" ]; then
     if ! (echo "$repo" | grep -i "$1" &>/dev/null) ; then
       continue

@@ -19,7 +19,7 @@ export PAGER=less
 
 alias clip='xclip -i -selection clipboard'
 
-autoload -Uz promptinit; promptinit
+autoload -U promptinit; promptinit
 prompt pure
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

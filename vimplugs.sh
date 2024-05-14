@@ -40,9 +40,9 @@ repos=(
   leafgarland/typescript-vim
   othree/html5.vim
   evanleck/vim-svelte
-  neoclide/coc.nvim
   kenn7/vim-arsync
   habamax/vim-godot 
+  chikamichi/mediawiki.vim
 )
 
 set -e

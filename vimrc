@@ -1,9 +1,55 @@
 execute pathogen#infect()
+call plug#begin()
+
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'morhetz/gruvbox'
+Plug 'kchmck/vim-coffee-script'
+Plug 'airblade/vim-gitgutter'
+Plug 'wavded/vim-stylus'
+Plug 'tikhomirov/vim-glsl'
+Plug 'plasticboy/vim-markdown'
+Plug 'pangloss/vim-javascript'
+Plug 'ElmCast/elm-vim'
+Plug 'cespare/vim-toml'
+Plug 'elixir-lang/vim-elixir'
+Plug 'rust-lang/rust.vim'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'vim-scripts/dbext.vim'
+Plug 'fidian/hexmode'
+Plug 'digitaltoad/vim-pug'
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'statico/vim-javascript-sql'
+Plug 'vim-scripts/bbcode'
+Plug 'ollykel/v-vim'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-vinegar'
+Plug 'junegunn/goyo.vim'
+Plug 'goldfeld/vim-seek'
+Plug 'junegunn/limelight.vim'
+Plug 'sgur/vim-editorconfig'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'junegunn/fzf'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'ziglang/zig.vim'
+Plug 'radgeRayden/vim-scopes'
+Plug 'leafgarland/typescript-vim'
+Plug 'othree/html5.vim'
+Plug 'evanleck/vim-svelte'
+Plug 'kenn7/vim-arsync'
+Plug 'habamax/vim-godot '
+Plug 'chikamichi/mediawiki.vim'
+Plug 'OmniSharp/omnisharp-vim'
+
+call plug#end()
 
 " Enable defaults that really should've been enabled in the first place
 syntax on
 filetype plugin on
 filetype plugin indent on
+filetype indent plugin on
 colorscheme gruvbox
 " Let me keep my transparent background
 set t_Co=256
@@ -69,6 +115,12 @@ vnoremap å za
 nnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
 vnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
 
+
+" asynccomplete
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
 " Ctrl+space to autocomplete paths
 imap <C-space> <C-x><C-f>
 set path +=**
@@ -126,5 +178,4 @@ endfunction
 
 set nofixendofline
 
-" vim-powered terminal in split window
-map <Leader>t :term ++close<cr>
+let g:OmniSharp_server_use_net6 = 1

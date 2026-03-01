@@ -1,4 +1,3 @@
-execute pathogen#infect()
 call plug#begin()
 
 " List your plugins here

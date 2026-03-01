@@ -55,3 +55,6 @@ for path in ./bin/*; do
   file="${path##*/}"
   link $path "bin/$file"
 done
+
+# Initialize ctags generation with each git action
+git config --global init.templatedir '~/.git_template'

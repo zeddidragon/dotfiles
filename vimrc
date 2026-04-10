@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'wavded/vim-stylus'
 Plug 'tikhomirov/vim-glsl'
 Plug 'plasticboy/vim-markdown'
+Plug 'jonsmithers/vim-html-template-literals'
 Plug 'pangloss/vim-javascript'
 Plug 'ElmCast/elm-vim'
 Plug 'cespare/vim-toml'
@@ -20,7 +21,6 @@ Plug 'vim-scripts/dbext.vim'
 Plug 'fidian/hexmode'
 Plug 'digitaltoad/vim-pug'
 Plug 'iamcco/markdown-preview.nvim'
-Plug 'statico/vim-javascript-sql'
 Plug 'vim-scripts/bbcode'
 Plug 'ollykel/v-vim'
 Plug 'dense-analysis/ale'
@@ -37,10 +37,12 @@ Plug 'radgeRayden/vim-scopes'
 Plug 'leafgarland/typescript-vim'
 Plug 'othree/html5.vim'
 Plug 'evanleck/vim-svelte'
-Plug 'kenn7/vim-arsync'
 Plug 'habamax/vim-godot '
 Plug 'chikamichi/mediawiki.vim'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'Lord-Leonard/vim-aspnet'
+Plug 'OrangeT/vim-csharp'
+Plug 'elzr/vim-json'
 
 call plug#end()
 
@@ -53,7 +55,8 @@ colorscheme gruvbox
 " Let me keep my transparent background
 set t_Co=256
 set background=dark
-hi Normal ctermbg=none
+autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+hi Normal ctermbg=NONE guibg=NONE
 set ruler
 set backspace=2
 set number
@@ -62,11 +65,11 @@ set relativenumber
 set incsearch
 set hlsearch
 set hidden
-set wrap
+set nowrap
 set linebreak
 set autoindent
-set colorcolumn=80
-set tabstop=4
+set colorcolumn=72
+set tabstop=2
 set list
 set listchars=tab:>-
 set shiftwidth=2
@@ -116,9 +119,9 @@ vnoremap Å :set fdm=syntax<cr>:set fdm=manual<cr>zA
 
 
 " asynccomplete
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " Ctrl+space to autocomplete paths
 imap <C-space> <C-x><C-f>
@@ -133,6 +136,10 @@ tmap <C-h> <C-w>h
 tmap <C-j> <C-w>j
 tmap <C-k> <C-w>k
 tmap <C-l> <C-w>l
+
+" Quick splitting
+map <space>v :vs<CR>
+map <space>h :split<CR>
 
 " Clear search command
 command! C let @/=""
@@ -159,13 +166,16 @@ cnoreabbrev Ag Ack
 
 let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.SGO'
 let g:ale_echo_msg_format = '%linter% says %s'
+let g:ale_linters = {
+\   'cs': ['OmniSharp']
+\}
 
 " !!Experimental craziness!!
-nnoremap vmc :e ~/.vimrc<CR>
 nmap <space>r :!tmux send-keys -t .+ Up Enter<CR><CR>
 nmap <space>y :let @+=@"<CR>:let @*=@"<CR>
 nmap <space>p :let @"=@+<CR>p
-
+" K is split line, opposite J which is join line
+nnoremap K i<CR><Esc>
 
 " override tab settings on a per-directory basis
 function! SetStandardTabs()
@@ -178,3 +188,13 @@ endfunction
 set nofixendofline
 
 let g:OmniSharp_server_use_net6 = 1
+let g:OmniSharp_selector_ui = 'fzf'
+let g:OmniSharp_selector_finusages = 'fzf'
+
+" automatically mark Css, Html, and Js files for quickly working with a component
+augroup VIMRC
+  autocmd!
+  autocmd BufLeave *.css       normal! mC
+  autocmd BufLeave *.html      normal! mH
+  autocmd BufLeave *.js,*.ts   normal! mJ
+augroup END
